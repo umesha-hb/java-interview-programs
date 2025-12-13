@@ -1,0 +1,30 @@
+<ns1:PrintJob xmlns:ns1="http://www.hp.com/schemas/imaging/con/cloud/onramp/2009/12/20">
+<ns1:PrintJobDescription>
+    <ns1:Name>Alignment test_1.pdf</ns1:Name>
+    <ns1:JobOriginatingUserName>{{owner_useremail}}</ns1:JobOriginatingUserName>
+</ns1:PrintJobDescription>
+<ns1:PrintJobProcessingElements>
+<ns1:StartImmediately>true</ns1:StartImmediately>
+<ns1:DeviceId>{{printerId}}</ns1:DeviceId>
+</ns1:PrintJobProcessingElements>
+<ns1:PrintJobDocuments>
+<ns1:PrintJobDocument>
+    <ns1:PrintJobDocumentDescription>
+        <ns1:Name>Alignment test_1.pdf</ns1:Name>
+        <ns1:DocumentFormat>pdf</ns1:DocumentFormat>
+    </ns1:PrintJobDocumentDescription>
+    <ns1:PrintJobDocumentProcessingElements>
+        <ns1:OrientationRequested>Portrait</ns1:OrientationRequested>
+        <ns1:MediaSizeName>NaLetter_8.5x11in</ns1:MediaSizeName>
+        <ns1:Copies>1</ns1:Copies>
+        <ns1:PrintQuality>FastDraft</ns1:PrintQuality>
+        <ns1:MediaType>Plain</ns1:MediaType>
+        <ns1:Plex>None</ns1:Plex>
+        <ns1:InputBin>AutoSelect</ns1:InputBin>
+        <ns1:MarginsType>MarginLess</ns1:MarginsType>
+        <ns1:Color>Color</ns1:Color>
+        <ns1:PageScaling>None</ns1:PageScaling>
+    </ns1:PrintJobDocumentProcessingElements>
+</ns1:PrintJobDocument>
+</ns1:PrintJobDocuments>
+        </ns1:PrintJob>
