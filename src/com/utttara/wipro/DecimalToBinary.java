@@ -1,11 +1,9 @@
-package wipro;
+package com.utttara.wipro;
 
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 import java.util.List;
-import java.util.stream.Stream;
 
 
 public class DecimalToBinary {

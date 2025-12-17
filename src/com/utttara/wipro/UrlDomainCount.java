@@ -1,4 +1,4 @@
-package wipro;
+package com.utttara.wipro;
 
 import java.net.MalformedURLException;
 import java.net.URL;

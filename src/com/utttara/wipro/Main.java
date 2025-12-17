@@ -1,4 +1,4 @@
-package wipro;
+package com.utttara.wipro;
 
 import java.util.Scanner;  
 public class Main

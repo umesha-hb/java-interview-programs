@@ -8,12 +8,12 @@ public class BalancedParenthesesExample {
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < str.length(); i++) {
             char x = str.charAt(i);
+            char check;
             if (x == '(' || x == '[' || x == '{') {
                 stack.push(x);
                 continue;
             }
             if (stack.isEmpty()) return false;
-            char check;
             switch (x) {
                 case ')':
                     check = stack.pop();
@@ -33,7 +33,7 @@ public class BalancedParenthesesExample {
     }
     public
     static void main(String[] args) {
-        String str = "[()]";
+        String str = "{[()]}";
         if (balancedParenthesis(str))
             System.out.println("True");
         else

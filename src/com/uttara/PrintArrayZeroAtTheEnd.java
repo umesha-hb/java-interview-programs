@@ -19,7 +19,6 @@ public class PrintArrayZeroAtTheEnd {
 				arr[j++]=arr[i];
 			}
 		}
-	
 		while(count>0)
 		{
 			arr[j++]=0;

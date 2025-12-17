@@ -1,16 +1,12 @@
-package hp.epc;
-
-import static org.springframework.security.oauth.common.OAuthCodec.oauthEncode;
+package com.utttara.epc;
 
 import java.io.IOException;
 import java.util.Optional;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.codec.net.URLCodec;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
 

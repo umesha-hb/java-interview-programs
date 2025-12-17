@@ -1,4 +1,4 @@
-package wipro;
+package com.utttara.wipro;
 
 public class FIndSumOfDaignalELementsIn2DArray {
 
