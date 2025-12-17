@@ -54,7 +54,7 @@ public class Test {
                     String header = new String(base64Url.decode(base64EncodedHeader));
                     String body = new String(base64Url.decode(base64EncodedBody));
                     ObjectMapper mapper = new ObjectMapper();
-                    mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+//                    mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
                     Token tp = mapper.readValue(body, Token.class);
                     return tp;
                 }
