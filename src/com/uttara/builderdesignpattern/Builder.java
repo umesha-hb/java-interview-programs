@@ -2,7 +2,8 @@ package com.uttara.builderdesignpattern;
 
 /*
  * The Builder Pattern is a creational design pattern used to construct complex objects step-by-step.
- * 
+ * Separates the construction of an object from its representation.
+ * Useful when a class has many optional parameters or complex construction logic.
  */
  class User {
 	// Required parameters
