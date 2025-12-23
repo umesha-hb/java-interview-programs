@@ -2,7 +2,7 @@ package com.uttara.custom.annotations;
 import java.lang.annotation.*;  
 import java.lang.reflect.*;  
   
-public class TestCustomAnnotation1 {
+public class TestCustomAnnotation {
 
 	public static void main(String[] args) throws Exception {
 		Hello h=new Hello();  
