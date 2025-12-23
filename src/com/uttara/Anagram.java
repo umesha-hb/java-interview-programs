@@ -7,6 +7,7 @@ import java.util.stream.Stream;
 public class Anagram {
 
 	public static void main(String[] args) {
+
 		String s1 = "geeks";
 		String s2 = "kseeg";
 		s1 = Stream.of(s1.split("")).map(String::toUpperCase).sorted()
@@ -17,7 +18,16 @@ public class Anagram {
 			System.out.println("Two Strings are Anagrams");
 		else
 			System.out.println("Two Strings are Not Anagrams");
-
 	}
+}
+@FunctionalInterface
+interface B extends A{
+	public void a();
+}
+@FunctionalInterface
+interface A
+{
+	public void a();
 
 }
+

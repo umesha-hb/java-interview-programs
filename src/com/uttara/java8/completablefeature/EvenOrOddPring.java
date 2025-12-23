@@ -11,31 +11,46 @@ import java.util.stream.IntStream;
  * @author Admin
  *
  */
-public class EvenOrOddPring {
-	private static Object object=new Object();
-	private static IntPredicate evenCond=e->e%2==0;
-	private static IntPredicate oddCond=e->e%2!=0;
-	public static void main(String args[]) throws InterruptedException
-	{
-		CompletableFuture.runAsync(()->EvenOrOddPring.printNumber(oddCond));
-		CompletableFuture.runAsync(()->EvenOrOddPring.printNumber(evenCond));
-		Thread.sleep(1000);
-	}
-	public static void printNumber(IntPredicate condition)
-	{
-		IntStream.rangeClosed(1, 10).filter(condition).forEach(EvenOrOddPring::execute);
-	}
-	
-	public static void execute(int no)
-	{
-		synchronized (object) {
-			try {
-				System.out.println(Thread.currentThread().getName()+" : "+no);
-				object.notify();
-				object.wait();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
+//public class EvenOrOddPring {
+//	private static Object object=new Object();
+//	private static IntPredicate evenCond=e->e%2==0;
+//	private static IntPredicate oddCond=e->e%2!=0;
+//	public static void main(String args[]) throws InterruptedException
+//	{
+//		CompletableFuture.runAsync(()->EvenOrOddPring.printNumber(oddCond));
+//		CompletableFuture.runAsync(()->EvenOrOddPring.printNumber(evenCond));
+//		Thread.sleep(1000);
+//	}
+//	public static void printNumber(IntPredicate condition)
+//	{
+//		IntStream.rangeClosed(1, 10).filter(condition).forEach(EvenOrOddPring::execute);
+//	}
+//
+//	public static void execute(int no)
+//	{
+//		synchronized (object) {
+//			try {
+//				System.out.println(Thread.currentThread().getName()+" : "+no);
+//				object.notify();
+//				object.wait();
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//	}
+//}
+class Printer {
+
+	public static synchronized void print() {
+		System.out.println(Thread.currentThread().getName() + " printing...");
 	}
 }
+
+public class EvenOrOddPring {
+	public static void main(String[] args) {
+Integer a=1000;
+		Integer b=1000;
+		System.out.println(a==b);
+	}
+}
+
