@@ -3,7 +3,7 @@ package com.uttara.luxoft.scb;
 public class PermutationCombinationExample {
 
 	public static void main(String[] args) {
-		int n = 7, r = 3, comb, per;
+		int n = 4, r = 3, comb, per;
 	      per = factorial(n) / factorial(n-r);
 	      System.out.println("Permutation: " + per);
 	      comb = factorial(n) / (factorial(r) * factorial(n-r));

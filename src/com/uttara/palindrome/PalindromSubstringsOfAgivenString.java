@@ -4,46 +4,53 @@ public class PalindromSubstringsOfAgivenString {
 
 	public static void main(String[] args) {
 		// Custom input string
-        String str = "aba";
- 
+        String str = "babad";
+
+        System.out.println(
+                "No.of palindromic substrings in the given string are "
+                + countPalindromicSubstrings(str));
+	}
+
+
+    public static int countPalindromicSubstrings(String s) {
+        int n = s.length();
         int count = 0;
- 
-        // Outer loop iterating over input string
-        for (int i = 0; i < str.length(); i++) {
- 
-            // Inner loop iterating from current starting
-            // character of outer loop current starting
-            // character
-            for (int j = i; j < str.length(); j++) {
- 
-                // Getting the substrings
-                String subString = str.substring(i, j + 1);
- 
-                // Checking whether the substring is
-                // palindrome
-                if (checkPlaindrome(subString)) {
- 
-                    // Increment the count only if
-                    // substring is palindrome
+
+        // Generate all substrings
+        for (int start = 0; start < n; start++) {
+            for (int end = start; end < n; end++) {
+                String subString = s.substring(start,end+1);
+                // Check if s[start..end] is palindrome
+                if (isPalindrome(subString)) {
+//                if (isPalindrome(s, start, end)) {
                     count++;
                 }
             }
         }
-        System.out.println(
-                "No.of palindromic substrings in the given string are "
-                + count);
-	}
- public static boolean checkPlaindrome(String str)
- {
-	 String reverse="";
-		for (int k = 0; k < str.length(); k++) {
-			reverse = reverse+ str.charAt(k);
-		}
-		if(reverse.equals(str))
-		{
-			System.out.println(str);
-			return true;
-		}
-		return false;
- }
+        return count;
+    }
+
+    private static boolean isPalindrome(String s) {
+        String reverse = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            reverse += s.charAt(i);
+        }
+        return s.equals(reverse);
+    }
+
+
+
+
+//  private static boolean isPalindrome(String s, int left, int right) {
+//        // Loop to check palindrome
+//        while (left < right) {
+//            if (s.charAt(left) != s.charAt(right)) {
+//                return false;
+//            }
+//            left++;
+//            right--;
+//        }
+//        return true;
+//    }
+
 }

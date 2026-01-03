@@ -3,7 +3,6 @@ package com.uttara.longest.string;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-import ch.qos.logback.core.recovery.ResilientSyslogOutputStream;
 
 public class FindTheLongestString {
  

@@ -2,51 +2,50 @@ package com.utttara.wipro;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class UrlDomainCount {
 
-	public static void main(String[] args) {
-		List<String>  myList= Arrays.asList("http://www.example.com/blah_blah",
-				"http://www.google.com/wpstyle/?p=364",
-				"http://www.yahoo.com/testcat_au.html",
-				"http://www.google.com/events/#&product=browser",
-				"http://www.example.com/wpstyle/?p=364");
-//		solution(myList);
-		
-		 Map<String,Long> al = myList.stream().collect(Collectors.groupingBy(e->{
-			try {
-				return new URL(e).getHost();
-			} catch (MalformedURLException e1) {
-				e1.printStackTrace();
-			}
-			return e;
-		}, Collectors.counting()));
-		 
-		solution(myList);
+    public static Map<String, Integer> solutionOne(List<String> myList) {
+        Map<String, Integer> map = new HashMap<>();
 
-	}
-	  public static void solution(List<String> MyList)
-	  {
-		  Map<String,Integer> al = new HashMap<String,Integer>();
-		  MyList.stream().forEach(e->{
-			try {
-				if(al.containsKey(new URL(e).getHost()))
-				{
-					al.put(new URL(e).getHost(),al.get(new URL(e).getHost())+1);
-				}
-				else
-				{
-				al.put(new URL(e).getHost(),1);
-				}
-			} catch (MalformedURLException e1) {
-				e1.printStackTrace();
-			}
-		});
-		  System.out.println(al);
-	  }
-	}
+        myList.forEach(e -> {
+            try {
+                String host = new URL(e).getHost();
+                map.put(host, map.getOrDefault(host, 0) + 1);
+            } catch (MalformedURLException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        return map;
+    }
+
+    public static Map<String, Long> solutionTwo(List<String> myList) {
+        return myList.stream()
+                .map(s -> {
+                    int l = s.indexOf("www");
+                    int r = s.indexOf("com");
+                    return s.substring(l, r + 3);
+                })
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+    }
+
+    public static Map<String, Long> solutionThree(List<String> myList) {
+        return myList.stream()
+                .collect(Collectors.groupingBy(e -> {
+                    try {
+                        return new URL(e).getHost();
+                    } catch (MalformedURLException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }, Collectors.counting()));
+    }
+
+    public static Map<String, Long> solutionFour(List<String> myList) {
+        return myList.stream()
+                .flatMap(e -> Arrays.stream(e.split("/")))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+    }
+}

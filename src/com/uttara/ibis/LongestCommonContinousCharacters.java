@@ -34,9 +34,7 @@ public class LongestCommonContinousCharacters
 	            }
 	        }
 	        System.out.println(res);
-//	      System.out.println(Math.min(Double.MIN_VALUE, 0.0d)); 
-	 
-	    }
+    }
 	 
 
 }

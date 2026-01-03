@@ -1,4 +1,4 @@
-package com.uttara.multithrading;
+package com.uttara.multithreading;
 
 public class SyncDemo 
 {
