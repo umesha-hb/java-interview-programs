@@ -1,4 +1,4 @@
-package com.uttara.string.infixtopostifix;
+package com.uttara.twosum.infixtopostifix;
 public class UserInput {
     
     public static class TextInput 
@@ -31,6 +31,9 @@ public class UserInput {
     }
 
     public static void main(String[] args) {
+        Integer a = 127;
+        Integer b = 127;
+        System.out.println(a == b);
        TextInput input = new NumericInput();
         input.add('1');
         input.add('a');

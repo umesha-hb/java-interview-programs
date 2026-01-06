@@ -1,4 +1,4 @@
-package com.uttara.string.infixtopostifix;
+package com.uttara.twosum.infixtopostifix;
 
 public class MathUtils {
 	  public static double average(int a, int b) {

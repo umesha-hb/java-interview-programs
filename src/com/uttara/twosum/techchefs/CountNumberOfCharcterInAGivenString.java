@@ -1,4 +1,4 @@
-package com.uttara.string.techchefs;
+package com.uttara.twosum.techchefs;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,12 +1,11 @@
-package com.uttara.string.infixtopostifix;
+package com.uttara.twosum.infixtopostifix;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
-public class Ch02Sum {
+//Optimized – O(n) using HashMap
+
+public class TwoSumOptimized {
 
 
 	public static void main(String[] args)

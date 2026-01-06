@@ -5,7 +5,6 @@ import java.util.stream.Stream;
 
 //same characters with the same frequencies.
 public class Anagram {
-
 	public static void main(String[] args) {
 
 		String s1 = "geeks";

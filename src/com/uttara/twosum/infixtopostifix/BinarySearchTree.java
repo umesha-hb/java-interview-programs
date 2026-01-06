@@ -1,4 +1,4 @@
-package com.uttara.string.infixtopostifix;
+package com.uttara.twosum.infixtopostifix;
 
 class Node {
     public int data;

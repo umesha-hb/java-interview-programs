@@ -1,4 +1,4 @@
-package com.uttara.string.programs;
+package com.uttara.twosum.programs;
 
 import java.io.Serializable;
 

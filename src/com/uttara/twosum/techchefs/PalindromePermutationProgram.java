@@ -1,4 +1,4 @@
-package com.uttara.string.techchefs;
+package com.uttara.twosum.techchefs;
 
 public class PalindromePermutationProgram {
 	public static void main(String args[])

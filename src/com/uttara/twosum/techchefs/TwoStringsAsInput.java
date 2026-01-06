@@ -1,6 +1,4 @@
-package com.uttara.string.techchefs;
-
-import java.util.Scanner;
+package com.uttara.twosum.techchefs;
 
 public class TwoStringsAsInput {
 

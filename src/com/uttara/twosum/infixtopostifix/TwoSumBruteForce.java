@@ -1,6 +1,7 @@
-package com.uttara.string.infixtopostifix;
+package com.uttara.twosum.infixtopostifix;
 
-public class TwoSum
+//Brute Force – O(n²)
+public class TwoSumBruteForce
 {
 	 public static int[] findTwoSum(int[] list, int sum)
 	    {

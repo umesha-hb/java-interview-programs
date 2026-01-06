@@ -31,26 +31,13 @@ public class PalindromSubstringsOfAgivenString {
     }
 
     private static boolean isPalindrome(String s) {
-        String reverse = "";
-        for (int i = s.length() - 1; i >= 0; i--) {
-            reverse += s.charAt(i);
-        }
-        return s.equals(reverse);
+        String reversed = new StringBuilder(s).reverse().toString();
+        return s.equals(reversed);
     }
 
 
 
 
-//  private static boolean isPalindrome(String s, int left, int right) {
-//        // Loop to check palindrome
-//        while (left < right) {
-//            if (s.charAt(left) != s.charAt(right)) {
-//                return false;
-//            }
-//            left++;
-//            right--;
-//        }
-//        return true;
-//    }
+
 
 }
