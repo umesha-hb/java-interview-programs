@@ -1,4 +1,4 @@
-package com.uttara;
+package com.utttara.arrays;
 
 public class SubArrays {
     public static void main(String args[]) {

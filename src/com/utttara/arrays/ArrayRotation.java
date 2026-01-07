@@ -1,4 +1,4 @@
-package com.uttara;
+package com.utttara.arrays;
 
 import java.util.Arrays;
 

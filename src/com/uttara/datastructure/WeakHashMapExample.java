@@ -1,11 +1,13 @@
 package com.uttara.datastructure;
 
+import java.util.HashMap;
 import java.util.WeakHashMap;
 
 public class WeakHashMapExample {
     public static void main(String[] args) {
 
-        WeakHashMap<String, String> map = new WeakHashMap<>();
+       WeakHashMap<String, String> map = new WeakHashMap<>();
+//        HashMap<String, String> map = new HashMap<>();
 
         String key1 = new String("key1");
         String key2 = new String("key2");
