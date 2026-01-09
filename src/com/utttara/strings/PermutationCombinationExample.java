@@ -1,4 +1,4 @@
-package com.uttara.luxoft.scb;
+package com.utttara.strings;
 
 public class PermutationCombinationExample {
 

@@ -1,4 +1,4 @@
-package com.uttara.ibis;
+package com.utttara.strings;
 
 import java.util.Arrays;
 

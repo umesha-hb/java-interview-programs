@@ -1,4 +1,4 @@
-package com.uttara.persistent;
+package com.utttara.arrays;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.uttara.palindrome;
+package com.utttara.palindrome;
 
 public class PalindromeExample1 {
 	public static void main(String args[])  

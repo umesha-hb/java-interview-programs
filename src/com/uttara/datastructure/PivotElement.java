@@ -1,4 +1,5 @@
 package com.uttara.datastructure;
+
 /*
 A pivot element in an array is an element
 where the sum of all elements to its left is equal to the sum of all elements to its right.
@@ -19,6 +20,11 @@ public class PivotElement {
             leftSum += nums[i];
         }
         return -1; // no pivot
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {1, 7, 3, 6, 5, 6};
+        System.out.println(PivotElement.pivotIndex(arr));
     }
 
 }

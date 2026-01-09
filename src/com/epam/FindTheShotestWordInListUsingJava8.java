@@ -1,8 +1,10 @@
 package com.epam;
 
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FindTheShotestWordInListUsingJava8 {
     public static void main(String args[]) {
@@ -15,7 +17,8 @@ public class FindTheShotestWordInListUsingJava8 {
         Integer y = 1000;
         System.out.println(x == y); // false
 List<String> list = Arrays.asList("Apple","Go","java","Stream");
-int minLength = list.stream().mapToInt(String::length).max().orElse(0);
-        System.out.println("minLength="+minLength);
+int minLength = list.stream().mapToInt(String::length).min().orElse(0);
+
+
     }
 }
