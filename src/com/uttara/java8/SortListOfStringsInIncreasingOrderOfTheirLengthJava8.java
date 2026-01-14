@@ -1,4 +1,4 @@
-package com.uttara;
+package com.uttara.java8;
 
 
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class SortListOfStringsInIncreasingOrderOfTheirLength {
+public class SortListOfStringsInIncreasingOrderOfTheirLengthJava8 {
 
 	public static void main(String[] args) {
 	     List<String> list = Arrays.asList( "ba", "ban", "banana", "apple", "ap", "ab", "cherry");

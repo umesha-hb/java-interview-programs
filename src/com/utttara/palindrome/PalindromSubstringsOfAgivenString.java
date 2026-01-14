@@ -20,9 +20,7 @@ public class PalindromSubstringsOfAgivenString {
         for (int start = 0; start < n; start++) {
             for (int end = start; end < n; end++) {
                 String subString = s.substring(start,end+1);
-                // Check if s[start..end] is palindrome
                 if (isPalindrome(subString)) {
-//                if (isPalindrome(s, start, end)) {
                     count++;
                 }
             }

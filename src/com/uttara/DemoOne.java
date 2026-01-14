@@ -65,8 +65,8 @@ public class DemoOne {
             
             Map<String,String> map1=new HashMap<String,String>();
             map1.put("virat", "Kohli");
-     	  map1.put("virat", "anil");
-            map1.put("virat", "Rechards");
+     	  map1.put("virat1", "anil");
+            map1.put("virat2", "Rechards");
             map1.entrySet().stream().filter(e->e.getKey().startsWith(e.getKey().toLowerCase())).forEach(System.out::println);
 
 

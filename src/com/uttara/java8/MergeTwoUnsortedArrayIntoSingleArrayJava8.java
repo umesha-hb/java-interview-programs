@@ -1,10 +1,9 @@
-package com.uttara;
+package com.uttara.java8;
 
-import java.io.InputStream;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-public class MergeTwoUnsortedArrayIntoSingleArray {
+public class MergeTwoUnsortedArrayIntoSingleArrayJava8 {
 	public static void main(String[] args) {
 		int a[]= {7,9,7,1,9,1};
 		int b[]= {3,4,5,1,3,6,8};

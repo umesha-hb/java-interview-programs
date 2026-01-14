@@ -1,11 +1,11 @@
-package com.uttara;
+package com.uttara.java8;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
 
-public class JavaReduce {
+public class Java8Reduce {
 
 	public static void main(String[] args) {
 		List<Invoice> invoices = Arrays.asList(

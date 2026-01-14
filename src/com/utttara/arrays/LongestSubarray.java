@@ -14,23 +14,26 @@ public class LongestSubarray {
 
             // If entire array till i sums to k
             if (sum == k) {
-                maxLen = i + 1;
+                 maxLen = i + 1;
             }
 
             // If (sum - k) seen before
             if (map.containsKey(sum - k)) {
+
                 maxLen = Math.max(maxLen, i - map.get(sum - k));
+                System.out.println("i : "+i);
             }
 
             // Store first occurrence only
             map.putIfAbsent(sum, i);
         }
+
         return maxLen;
     }
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 1, 1, 1, 1};
-        int k = 5;
+        int k = 3;
         System.out.println(longestSubarray(arr, k));
     }
 }

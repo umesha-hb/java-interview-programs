@@ -2,7 +2,7 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.uttara.datastructure.PivotElement;
+import com.uttara.sorting.PivotElement;
 import org.junit.jupiter.api.Test;
 
 class PivotElementTest {

@@ -1,9 +1,9 @@
-package com.uttara;
+package com.uttara.java8;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class SumOfAllDigitsOfANumber {
+public class SumOfAllDigitsOfANumberJava8 {
 
 	public static void main(String[] args) {
 		int number=567;

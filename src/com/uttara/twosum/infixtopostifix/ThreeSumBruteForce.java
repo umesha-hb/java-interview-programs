@@ -29,8 +29,8 @@ public class ThreeSumBruteForce {
         return new ArrayList<>(result);
     }
     public static void main(String args[]){
-        int nums[]= {1, 2, -2, 0, -1, 1};
-        int taget=0;
+        int nums[]= {12, 3, 4, 1, 6, 9};
+        int taget=24;
         System.out.println(findTriplets(nums,taget));
     }
 }

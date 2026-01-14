@@ -27,7 +27,7 @@ public class TwoSumBruteForce
 	    }
 
 	    public static void main(String[] args) {
-	        int[] indices = findTwoSum(new int[] { 3, 1, 5, 7, 5, 9 }, 10);
+	        int[] indices = findTwoSum(new int[] {2, 7, 11, 15 }, 9);
 	       	        if(indices != null) {
 	            System.out.println(indices[0] + " " + indices[1]);
 	        }

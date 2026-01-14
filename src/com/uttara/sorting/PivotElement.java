@@ -1,4 +1,4 @@
-package com.uttara.datastructure;
+package com.uttara.sorting;
 
 /*
 A pivot element in an array is an element
@@ -9,15 +9,16 @@ public class PivotElement {
         int totalSum = 0;
         for (int num : nums) {
             totalSum += num;
-        }
+        }//totalsum
 
-        int leftSum = 0;
+        int leftSum = 0;//left sum
         for (int i = 0; i < nums.length; i++) {
-            int rightSum = totalSum - leftSum - nums[i];
+            int rightSum = totalSum - leftSum - nums[i];//right sum
+            //totalsum-leftsum-num[i]
             if (leftSum == rightSum) {
-                return i; // pivot index
+                return i; // return pivot index
             }
-            leftSum += nums[i];
+            leftSum += nums[i]; //leftSum=leftSum+num[i];
         }
         return -1; // no pivot
     }

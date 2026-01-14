@@ -6,23 +6,29 @@ import java.util.Map;
 //Optimized – O(n) using HashMap
 
 public class TwoSumOptimized {
+	public static int[] twoSum(int[] nums, int target) {
+		Map<Integer, Integer> map = new HashMap<>();
+
+		for (int i = 0; i < nums.length; i++) {
+			int delta= target - nums[i];
+
+			if (map.containsKey(delta)) {
+				return new int[] { map.get(delta), i };
+			}
+
+			map.put(nums[i], i);
+		}
+
+		return new int[] {}; // no solution found
+	}
 
 
 	public static void main(String[] args)
 	{
-		int[] numbers = {2,7,11,15};
+		int[] nums = {2, 7, 11, 15};
 		int target = 9;
-		Map<Integer, Integer> vistedNumbers = new HashMap<Integer, Integer>();
-		for (int i = 0; i < numbers.length; i++)
-		{
-			int delta = target - numbers[i];
-			if(vistedNumbers.containsKey(delta))
-			{
-				System.out.println(vistedNumbers.get(delta)+" "+i);
-			}
-			else
-			vistedNumbers.put(numbers[i], i); 
-		}
 
+		int[] result = twoSum(nums, target);
+		System.out.println(result[0] + ", " + result[1]);
 	} 
 }

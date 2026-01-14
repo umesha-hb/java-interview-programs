@@ -4,11 +4,11 @@ public class TwoStringsAsInput {
 
 	public static void main(String[] args) {
 	 String s1 = "OP134";
-	 String s2 = "OP5";
+	 String s2 = "OP135";
 	 TwoStringsAsInput twoStrAsInput = new TwoStringsAsInput();
 	 System.out.println("----OUTPUT-----");
 	 System.out.println("op1 =" +twoStrAsInput.remove(s1, s2));
-	 System.out.println("op2 =" +twoStrAsInput.remove(s2, s1));
+
 
 	} 
    public String remove(String str1,String str2)
