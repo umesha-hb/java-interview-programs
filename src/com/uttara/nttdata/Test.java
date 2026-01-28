@@ -10,7 +10,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
+//expect output single integer array elements in sorted descending order there should not be any duplicate
 public class Test {
 
 	public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class Test {
 		int a[]= {10,20,30,5};
 		int b[]= {15,25,20,10};
 		int c[]= {30,35,40,5};
-		//expect output single integer array elements in sorted descending order there should not be any duplicate
+
 		Set<Integer> hs = new HashSet<>();
 		for (int i = 0; i < a.length; i++) {
 			hs.add(a[i]);
@@ -30,7 +30,7 @@ public class Test {
 			hs.add(c[i]);
 		}
 		List l =hs.stream().sorted().collect(Collectors.toList());
-		
+		System.out.println(l+" ");
 		int d[]=new int[hs.size()];
 		for (int i = 0; i < hs.size(); i++) {
 			d[i]=(int) l.get(i);
@@ -38,7 +38,7 @@ public class Test {
 		for (int i = 0; i < d.length; i++) {
 			System.out.println(d[i]+" ");
 		}
-		Arrays.asList(d).stream().sorted().forEach(System.out::println);
+
 		Map<String, Integer> map = new HashMap<>();
 		map.put("python", 3);
 		map.put(".net", 2);

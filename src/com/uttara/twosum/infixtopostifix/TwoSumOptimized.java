@@ -11,7 +11,7 @@ public class TwoSumOptimized {
 
 		for (int i = 0; i < nums.length; i++) {
 			int delta= target - nums[i];
-
+			System.out.println(map);
 			if (map.containsKey(delta)) {
 				return new int[] { map.get(delta), i };
 			}
@@ -25,8 +25,8 @@ public class TwoSumOptimized {
 
 	public static void main(String[] args)
 	{
-		int[] nums = {2, 7, 11, 15};
-		int target = 9;
+		int[] nums = {8,9,1,-2,4,5,11};
+		int target = 6;
 
 		int[] result = twoSum(nums, target);
 		System.out.println(result[0] + ", " + result[1]);

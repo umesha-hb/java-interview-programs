@@ -44,18 +44,7 @@ public class FindTheLongestContinusCharctersInString {
 
         System.out.println("Longest continuous character: " + maxChar);
         System.out.println("Count: " + maxCount);
-        String number="31893";
-        List<Integer> descendingList = Stream.of(number.split("")).mapToInt(e -> Integer.parseInt(e)).boxed()
-        .sorted().collect(Collectors.toList());
 
-        List<Integer> ascendingList = Stream.of(number.split("")).mapToInt(e -> Integer.parseInt(e)).boxed()
-                .sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-
-        List<Integer> result = IntStream
-                .range(0, descendingList.size())
-                .map(i -> descendingList.get(i) - ascendingList.get(i))
-                .boxed()
-                .collect(Collectors.toList());
     }
 
 }

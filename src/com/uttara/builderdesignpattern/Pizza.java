@@ -1,7 +1,7 @@
 package com.uttara.builderdesignpattern;
 
 // especially when an object has many optional fields.
-// Step 1: The Product class
+// Step 1: The Pizza class
 public class Pizza {
     private String dough;
     private String sauce;

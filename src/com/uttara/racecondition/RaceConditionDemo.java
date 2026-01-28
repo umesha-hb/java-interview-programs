@@ -6,13 +6,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 //using synchronization:
 //using AtomicInteger:
 class Counter {
-//    AtomicInteger count = new AtomicInteger(0);
-    int count=0;
+    AtomicInteger count = new AtomicInteger(0);
+//    int count=0;
 
     // Increment method without synchronization
     public   void increment() {
-//        count.incrementAndGet();
-        count++;
+       count.incrementAndGet();
+//        count++;
     }
 
 }

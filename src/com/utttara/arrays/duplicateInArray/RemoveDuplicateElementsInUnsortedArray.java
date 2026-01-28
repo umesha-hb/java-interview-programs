@@ -1,4 +1,4 @@
-package com.uttara.remove.duplicateInArray;
+package com.utttara.arrays.duplicateInArray;
 
 import java.util.Arrays;
 

@@ -5,6 +5,9 @@ import java.util.Arrays;
 public class ReverseTheStringWithSpacesAndKeepThePositionSpaceIntact {
     public static void main(String args[]){
         String str="I am here";
+        StringBuffer stringBuffer = new StringBuffer(str);
+        System.out.println(str);
+//        System.out.println(stringBuffer.reverse().toString());
         char[] ch = str.toCharArray();
         int left=0;
         int right =ch.length-1;

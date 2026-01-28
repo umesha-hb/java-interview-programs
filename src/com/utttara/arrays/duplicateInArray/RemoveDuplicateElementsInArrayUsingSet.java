@@ -1,10 +1,7 @@
-package com.uttara.remove.duplicateInArray;
+package com.utttara.arrays.duplicateInArray;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class RemoveDuplicateElementsInArrayUsingSet {
 

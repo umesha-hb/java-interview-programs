@@ -1,6 +1,5 @@
 package com.uttara.datastructure.implementation;
 
-//Java program to detect and remove loop in linked list
 
 public class CustomLinkedList {
 

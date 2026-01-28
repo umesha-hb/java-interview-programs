@@ -26,7 +26,7 @@ public class GroupByJava8Person {
                 personList.stream().collect(Collectors.groupingBy(Person::getGender));
 		//Group by gender List : Female-> Persons and Male -> Persons
         System.out.println("1. Group persons by gender - get result in List: ");
-        System.out.println(groupByGenderList.toString());
+        System.out.println(groupByGenderList);
 //        personList.stream().collect(Collectors.groupingBy(e->e.getName(),Collectors.maxBy(Comparator.comparing(Person::getAge))));
         
         Map<String, Set<Person>> groupByGenderSet = 

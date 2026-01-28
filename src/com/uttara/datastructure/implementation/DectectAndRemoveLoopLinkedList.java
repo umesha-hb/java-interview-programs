@@ -14,8 +14,8 @@ public class DectectAndRemoveLoopLinkedList {
 
     // Detect and remove loop
     public static void removeLoop(Node head) {
-        Node slow = head;
-        Node fast = head;
+        Node slow = head;//slow
+        Node fast = head;//fast
         boolean loopExists = false;
 
         // Step 1: Detect loop
@@ -69,8 +69,8 @@ public class DectectAndRemoveLoopLinkedList {
         head.next = new Node(2);
         head.next.next = new Node(3);
         head.next.next.next = new Node(4);
-        head.next.next.next.next = head.next; // creates a loop (2 -> 3 -> 4 -> 2)
-//       printList(head);
+        head.next.next.next.next =  head.next.next; // creates a loop (1->2 -> 3 -> 4 -> 1)
+//     printList(head);
 
         removeLoop(head);   // Detect and remove loop
 

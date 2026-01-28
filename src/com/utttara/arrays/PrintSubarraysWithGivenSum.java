@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class PrintSubarraysWithGivenSum {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 1, 1, 1, 1};
-        int k = 5;
+        int[] arr = {-2,1,-3,4,-1,2,1,-5,4};
+        int k = 6;
         printSubarraysWithGivenSum(arr, k);
     }
 

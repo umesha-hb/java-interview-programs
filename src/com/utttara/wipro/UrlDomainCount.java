@@ -45,7 +45,17 @@ public class UrlDomainCount {
 
     public static Map<String, Long> solutionFour(List<String> myList) {
         return myList.stream()
-                .flatMap(e -> Arrays.stream(e.split("/")))
+                .flatMap(e -> Arrays.stream(e.split("/"))
+                        .filter(e1->e1.startsWith("www")))
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+    }
+
+    public static void main(String[] args) {
+        List inputs= Arrays.asList("http://www.example.com/blah_blah",
+                "http://www.google.com/wpstyle/?p=364",
+                "http://www.yahoo.com/testcat_au.html",
+                "http://www.google.com/events/#&product=browser",
+                "http://www.example.com/wpstyle/?p=364");
+        System.out.println(solutionFour(inputs));
     }
 }

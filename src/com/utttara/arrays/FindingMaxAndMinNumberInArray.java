@@ -1,6 +1,6 @@
 package com.utttara.arrays;
 
-public class FindingLargestAndSmallestNumberInArray {
+public class FindingMaxAndMinNumberInArray {
     public static void main(String[] args)
     {
         int max = Integer.MIN_VALUE;

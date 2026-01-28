@@ -1,27 +1,42 @@
 package com.uttara.custom.annotations;
-import java.lang.annotation.*;  
+/*
+
+A custom annotation in Java is created using @interface,
+controlled by meta-annotations like @Target and @Retention,
+and processed using reflection or annotation processors.
+ */
+
+import java.lang.annotation.*;
 import java.lang.reflect.*;  
-  
+
 public class TestCustomAnnotation {
 
 	public static void main(String[] args) throws Exception {
-		Hello h=new Hello();  
-		Method m=h.getClass().getMethod("sayHello");  
-		  
-		MyAnnotation manno=m.getAnnotation(MyAnnotation.class);  
-		System.out.println("value is: "+manno.value());  
+
+		Method method = MyService.class.getMethod("process");
+		if (method.isAnnotationPresent(LogExecutionTime.class)) {
+			LogExecutionTime annotation =
+					method.getAnnotation(LogExecutionTime.class);
+
+			System.out.println("Value: " + annotation.value());
+		}
 
 	}
 
 }
 
+/*
+A custom annotation lets you add metadata to Java code (classes, methods, fields, etc.) that can be:
+Read at compile time
+Or at runtime using reflection
+ */
 @Retention(RetentionPolicy.RUNTIME)  
 @Target(ElementType.METHOD) 
-@interface MyAnnotation{  
-int value();  
+@interface LogExecutionTime {
+	String value() default "";
 }  
 
-class Hello{  
-@MyAnnotation(value=10)  
-public void sayHello(){System.out.println("hello annotation");}  
+class MyService {
+	@LogExecutionTime("Service Method")
+public void process(){ System.out.println("Processing...");}
 }  

@@ -15,7 +15,7 @@ public class ConvertNameToUpperCaseAndSortJava8
 		  hashMap.put(2,"umesha");
 		  hashMap.put(3,"Ritesh");
 		  List<String> al = hashMap.entrySet().stream().map(e->e.getValue().toUpperCase()).
-				  sorted(String::compareTo).collect(Collectors.toList()); 
+				  sorted(String::compareTo).collect(Collectors.toList());
 		  System.out.println(al);
 		
 	}

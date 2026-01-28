@@ -51,7 +51,7 @@ public class A_PracticeHere {
                 "http://www.example.com/wpstyle/?p=364"};
 
         List<String> sites= Arrays.stream(inputs).flatMap(line-> Arrays.stream(line.split("/")))
-                .filter(words->words.startsWith("www"))
+//                .filter(words->words.startsWith("www"))
 				.collect(Collectors.toList());
         System.out.println("sites=="+sites);
          Map<String,Long> map=sites.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
