@@ -4,10 +4,10 @@ public class Employee {
 
 	int id;
 	String name;
-	double salary;
+	Integer salary;
 	String dept;
 
-	public Employee(int id, String name, double salary, String dept) {
+	public Employee(int id, String name, int salary, String dept) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -24,7 +24,7 @@ public class Employee {
 		return name;
 	}
 
-	public double getSalary() {
+	public Integer getSalary() {
 		return salary;
 	}
 
@@ -36,7 +36,7 @@ public class Employee {
 		this.name = name;
 	}
 
-	public void setSalary(double salary) {
+	public void setSalary(int salary) {
 		this.salary = salary;
 	}
 

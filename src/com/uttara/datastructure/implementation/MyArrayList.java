@@ -32,7 +32,7 @@ public class MyArrayList<E> {
         arList.add("Hello");
         arList.add("Hello");
         arList.add("Bye bye!");
-        System.out.println(arList.get(3));// prints Bye bye! which is correct
+        System.out.println(arList.get(7));// prints Bye bye! which is correct
 
     }
 

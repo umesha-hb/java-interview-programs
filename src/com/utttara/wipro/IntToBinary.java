@@ -7,7 +7,7 @@ public class IntToBinary {
         String binary = "";
 
         while (num > 0) {
-            binary = (num % 2) + binary;
+            binary = binary+(num % 2);
             num = num / 2;
         }
 

@@ -55,7 +55,7 @@ public class HighestSalaryPaidEmployeeInEachDept {
         Map<String, Employee> highestPaidByDeptMap =
                 employeeList.stream()
                         .collect(Collectors.toMap(
-                                Employee::getDept,
+                                e-> e.getDept(),
                                 e -> e,
                                 (e1, e2) -> e1.getSalary() > e2.getSalary() ? e1 : e2
                         ));

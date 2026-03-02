@@ -10,7 +10,7 @@ public class MaximumSubarray {
 
         for (int i = 1; i < nums.length; i++) {
             currentMax = Math.max(nums[i], currentMax + nums[i]);
-            maxSoFar = Math.max(maxSoFar, currentMax);//minSoFor //5 5
+            maxSoFar = Math.max(maxSoFar, currentMax);//minSoFor
         }
 
         return maxSoFar;
@@ -34,7 +34,7 @@ public class MaximumSubarray {
     }
 
     public static int maxSumUsingBruteForce(int[] nums) {
-        int arr[] =nums;
+        int arr[] = nums;
         ArrayList<Integer> al = new ArrayList<Integer>();
         for (int start = 0; start < arr.length; start++) {
             for (int end = start; end < arr.length; end++) {

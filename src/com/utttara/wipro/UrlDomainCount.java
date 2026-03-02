@@ -10,7 +10,6 @@ public class UrlDomainCount {
 
     public static Map<String, Integer> solutionOne(List<String> myList) {
         Map<String, Integer> map = new HashMap<>();
-
         myList.forEach(e -> {
             try {
                 String host = new URL(e).getHost();
@@ -56,6 +55,6 @@ public class UrlDomainCount {
                 "http://www.yahoo.com/testcat_au.html",
                 "http://www.google.com/events/#&product=browser",
                 "http://www.example.com/wpstyle/?p=364");
-        System.out.println(solutionFour(inputs));
+        System.out.println(solutionOne(inputs));
     }
 }

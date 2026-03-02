@@ -1,5 +1,9 @@
 package com.uttara.java8.tcs;
 
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class ConvertStringToInteger {
 
 	public static void main(String[] args) {
@@ -7,20 +11,8 @@ public class ConvertStringToInteger {
 		convert("234");
 	}
 	public static void convert(String s) 
-	{ 
-	      
-	    // Initialize a variable 
-	    int num = 0; 
-	    int n = s.length(); 
-	  
-	    // Iterate till length of the string 
-	    for(int i = 0; i < n; i++) {
-	  
-	        // Subtract 48 from the current digit 
-	        num = num * 10 + ((int)s.charAt(i)-48);
-	    }
-	    // Print the answer 
-	    System.out.print(num);
-	    System.out.println();
+	{
+		Stream.of(s.split("")).map(e -> Integer.valueOf(e)).
+				forEach(e->System.out.print(e));
 	} 
 }

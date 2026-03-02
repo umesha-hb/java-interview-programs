@@ -27,7 +27,7 @@ public class EmployeeTester {
 //		System.out.println(cs);  
 		 double avgSlaray =  employeeList.stream().mapToDouble(e->e.getSalary()).average().orElse(0);   
 		 System.out.println("avgSlaray="+avgSlaray);
-		 double sumOfSalary =   employeeList.stream().mapToDouble(e->e.getSalary()).sum();
+		 int sumOfSalary =   employeeList.stream().mapToInt(e->e.getSalary()).sum();
 		 System.out.println("sumOfSalary="+sumOfSalary);
 		 double minSalary = employeeList.stream().mapToDouble(e->e.getSalary()).min().orElse(0);
 		 System.out.println("minSalary="+minSalary);

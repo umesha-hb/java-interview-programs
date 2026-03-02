@@ -5,7 +5,6 @@ public class PalindromSubstringsOfAgivenString {
 	public static void main(String[] args) {
 		// Custom input string
         String str = "babad";
-
         System.out.println(
                 "No.of palindromic substrings in the given string are "
                 + countPalindromicSubstrings(str));
@@ -15,14 +14,13 @@ public class PalindromSubstringsOfAgivenString {
     public static int countPalindromicSubstrings(String s) {
         int n = s.length();
         int count = 0;
-
         // Generate all substrings
         for (int start = 0; start < n; start++) {
-            for (int end = start; end < n; end++) {
-                String subString = s.substring(start,end+1);
+//            for (int end = start; end < n; end++) {
+                String subString = s.substring(start,start+1);
                 if (isPalindrome(subString)) {
                     count++;
-                }
+//                }
             }
         }
         return count;
@@ -32,10 +30,4 @@ public class PalindromSubstringsOfAgivenString {
         String reversed = new StringBuilder(s).reverse().toString();
         return s.equals(reversed);
     }
-
-
-
-
-
-
 }

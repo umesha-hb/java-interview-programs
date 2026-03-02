@@ -13,7 +13,7 @@ In real-world scenarios like API responses,
 They improve readability, safety, and maintainability,
  especially in microservices and concurrent applications.
  */
-public record BankAccount (
+public record BankAccount  (
         String accountNumber,
         String holderName,
         double balance

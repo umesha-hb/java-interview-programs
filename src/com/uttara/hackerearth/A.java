@@ -13,8 +13,8 @@ public class A {
 		hashMap.put(6, 6);
 		Integer[] result = new Integer[hashMap.size()];
 		System.out.println(hashMap.size());
-	hashMap.keySet().toArray(result);
-		for(int i :result)
+	    hashMap.keySet().toArray(result);
+		for(int i : result)
 		{
 //			System.out.print(i+ " ");
 			System.out.print(hashMap.get(i%2));

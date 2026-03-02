@@ -10,7 +10,7 @@ public class FindTheLongestContinusCharctersInString {
 
     public static void main(String[] args) {
 
-        String input = "aabbccddeee";
+        String input = "aaabbccccddeeeeeeaa";
 
         if (input == null || input.isEmpty()) {
             System.out.println("Empty string");

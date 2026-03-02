@@ -10,7 +10,7 @@ public class PrintArrayZeroAtTheEnd {
         int i = 0;
         int j = arr.length - 1;
         while (i < j) {
-            if (arr[i] != 1) {
+            if (arr[i] == 0)
                 {
                     int temp = arr[i];
                     arr[i] = arr[j];
@@ -18,7 +18,7 @@ public class PrintArrayZeroAtTheEnd {
                 }
                 i++;
                 j--;
-            }
+
         }
         System.out.println(Arrays.toString(arr));
     }

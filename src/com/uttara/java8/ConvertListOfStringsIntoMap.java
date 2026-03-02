@@ -9,7 +9,6 @@ public class ConvertListOfStringsIntoMap {
     public static void main(String args[])
     {
         List<String> words = Arrays.asList("Software","Java","Collection","Learning","Learning","Stream");
-
         Map<String,Integer> map =
                 ConvertListOfStringsIntoMap.convertToMap(words);
         System.out.println(map);

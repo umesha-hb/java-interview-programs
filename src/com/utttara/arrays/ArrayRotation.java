@@ -2,7 +2,7 @@ package com.utttara.arrays;
 
 import java.util.Arrays;
 
-public class ArrayRotation
+public class  ArrayRotation
 {
     public static void main(String[] args)
     {

@@ -18,7 +18,7 @@ public class PivotElement {
             if (leftSum == rightSum) {
                 return i; // return pivot index
             }
-            leftSum += nums[i]; //leftSum=leftSum+num[i];
+            leftSum = leftSum+nums[i]; //leftSum=leftSum+num[i];
         }
         return -1; // no pivot
     }

@@ -69,7 +69,7 @@ public class SubArrayMaxProduct {
     }
     public static void main(String[] args) {
         int[] nums = {2, 3, -2, 4};
-        System.out.println(maxProductUsingBruteForce(nums)); // 6
+        System.out.println(maxProduct(nums)); // 6
 
     }
 }

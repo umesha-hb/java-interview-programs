@@ -1,5 +1,10 @@
 package com.utttara.arrays.duplicateInArray;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class PushZero {
 
 	public static void main(String[] args) {
@@ -21,7 +26,10 @@ public class PushZero {
 		{
 			System.out.print(arr[i]+" ");
 		}
+		List<Integer> collect = Stream.concat(Arrays.stream(arr).boxed().filter(e -> e == 1),
+				Arrays.stream(arr).boxed().filter(e -> e == 0)).collect(Collectors.toList());
 
+		System.out.println(collect);
 	}
 
 }

@@ -13,6 +13,9 @@ public class AnagramGrouper {
         Map<String, List<String>> grouped = input.stream()
                 .collect(Collectors.groupingBy(AnagramGrouper::sortedKey));
         // Step 2 & 3: Sort words inside groups and sort groups by size descending
+
+//        grouped.values().stream()
+//                .peek(Collections::sort).forEach(System.out::println); // sort
         return grouped.values().stream()
                 .peek(Collections::sort) // sort words inside each group
                 .sorted((a, b) -> Integer.compare(b.size(), a.size())) // sort groups by size desc

@@ -26,8 +26,8 @@ public class TestCustomAnnotation {
 }
 
 /*
-A custom annotation lets you add metadata to Java code (classes, methods, fields, etc.) that can be:
-Read at compile time
+A custom annotation lets you add metadata to Java code (classes, methods, fields, etc.)
+ that can be: Read at compile time
 Or at runtime using reflection
  */
 @Retention(RetentionPolicy.RUNTIME)  

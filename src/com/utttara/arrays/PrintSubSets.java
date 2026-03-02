@@ -5,8 +5,7 @@ import java.util.List;
 
 public class PrintSubSets {
     public static void main(String[] args) {
-
-        int[] arr = {1, 2, 3, 4,5};
+        int[] arr = {1, 2, 3, 4, 5};
         int n = arr.length;
         int totalSubsets = 1 << n; // 2^n
         int target = 12;
@@ -17,7 +16,7 @@ public class PrintSubSets {
             List<Integer> subset = new ArrayList<>();
             int sum = 0;
             for (int i = 0; i < n; i++) {
-                if ((mask & (1 << i)) != 0) {
+              if ((mask & (1 << i)) != 0) {
                     subset.add(arr[i]);
                     sum += arr[i];
                 }
