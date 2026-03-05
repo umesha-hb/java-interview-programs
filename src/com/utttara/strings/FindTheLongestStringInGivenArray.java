@@ -10,10 +10,9 @@ public class FindTheLongestStringInGivenArray {
 		String[] strArry = {"java","techie","springboot","microservices"};
 		System.out.println("LongestString: " + findLongestString(strArry));
 
-		String LongestString= Arrays.stream(strArry)
+		Arrays.stream(strArry)
 				.max((a, b) -> Integer.compare(a.length(), b.length()))
 				.orElse(null);
-		System.out.println("LongestString: " + LongestString);
 
 	}
 /*
@@ -43,3 +42,10 @@ Trace Table :
 	}
 
 }
+  /*
+    | Complexity Type  | Value    |
+    | ---------------- | -------- |
+    | Time Complexity  | **O(n)** |
+    | Space Complexity | **O(1)** |
+
+     */

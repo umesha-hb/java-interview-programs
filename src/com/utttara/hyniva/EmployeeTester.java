@@ -1,12 +1,6 @@
 package com.utttara.hyniva;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.OptionalDouble;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class EmployeeTester {
@@ -20,32 +14,60 @@ public class EmployeeTester {
 		employeeList.add(new Employee(1, "umesha2", 40000,"ME"));
 		employeeList.add(new Employee(1, "umesha4", 50000,"TE"));
 		employeeList.add(new Employee(1, "umesha3", 60000,"EEE"));
-//		hs.put("CS",employeeList);
-//		hs.put("EC",employeeList);
-//		hs.put("MECH",employeeList);
-//		Map<Object, List<Employee>> cs =  employeeList.stream().filter(e->e.getDept().equals("CS")).collect(Collectors.groupingBy(e->e.getSalary()));
-//		System.out.println(cs);  
-		 double avgSlaray =  employeeList.stream().mapToDouble(e->e.getSalary()).average().orElse(0);   
-		 System.out.println("avgSlaray="+avgSlaray);
-		 int sumOfSalary =   employeeList.stream().mapToInt(e->e.getSalary()).sum();
-		 System.out.println("sumOfSalary="+sumOfSalary);
-		 double minSalary = employeeList.stream().mapToDouble(e->e.getSalary()).min().orElse(0);
-		 System.out.println("minSalary="+minSalary);
-		 double maxSalary = employeeList.stream().mapToDouble(e->e.getSalary()).max().orElse(0);
-		 System.out.println("maxSalary="+maxSalary);
-		 double avgSlaray1 =  employeeList.stream().collect(Collectors.averagingDouble(e->e.getSalary()));
-		System.out.println("avgSlaray1="+avgSlaray1);
-		 
-		List<Employee> l =  employeeList.stream().filter(e->e.getSalary()>=50000&&e.getSalary()<=60000).sorted(Comparator.comparing(Employee::getName)).collect(Collectors.toList());
-		 System.out.println("l : "+l);
 
-		 double sumOfSalary1 = employeeList.stream().collect(Collectors.summingDouble(e->e.getSalary()));
-		 
-		 System.out.println(sumOfSalary1);
-		 Employee maxSalaryEmployee= employeeList.stream().collect(Collectors.maxBy(Comparator.comparing(Employee::getSalary))).get();
-		 System.out.println("maxSalaryEmployee="+maxSalaryEmployee);
-		 Employee minSalaryEmployee= employeeList.stream().collect(Collectors.minBy(Comparator.comparing(Employee::getSalary))).get();
+		//secondHighestEmployeeSalary
+		Employee secondHighest =
+				employeeList.stream()
+						.sorted(Comparator.comparing(Employee::getSalary).reversed())
+						.skip(1)
+						.findFirst()
+						.orElse(null);
+		System.out.println("secondHighest="+secondHighest);
+
+
+
+		//avg
+		 double avgSlaray =  employeeList.stream().
+				 mapToDouble(e->e.getSalary()).average().orElse(0);
+		 System.out.println("avgSlaray="+avgSlaray);
+
+		double avgSlaray1 =  employeeList.stream()
+				.collect(Collectors.averagingDouble(e->e.getSalary()));
+		System.out.println("avgSlaray1="+avgSlaray1);
+
+
+		 //sum
+		 int sumOfSalary =   employeeList.stream().
+				 mapToInt(e->e.getSalary()).sum();
+		 System.out.println("sumOfSalary="+sumOfSalary);
+
+		double sumOfSalary1 = employeeList.stream()
+				.collect(Collectors.summingDouble(e->e.getSalary()));
+		System.out.println(sumOfSalary1);
+
+		//min
+		 double minSalary = employeeList.stream()
+				 .mapToDouble(e->e.getSalary()).min().orElse(0);
+		 System.out.println("minSalary="+minSalary);
+
+		 Employee minSalaryEmployee= employeeList.stream()
+				 .collect(Collectors.minBy(Comparator.comparing(Employee::getSalary))).get();
 		 System.out.println("minSalaryEmployee="+minSalaryEmployee);
+
+		 //max
+		 double maxSalary = employeeList.stream()
+				 .mapToDouble(e->e.getSalary()).max().orElse(0);
+		 System.out.println("maxSalary="+maxSalary);
+
+		 Employee maxSalaryEmployee= employeeList.stream().
+				 collect(Collectors.maxBy(Comparator.comparing(Employee::getSalary))).get();
+	  	 System.out.println("maxSalaryEmployee="+maxSalaryEmployee);
+
+		   //count
+		long count = employeeList.stream().count();
+		System.out.println(count);
+
+
 	}
 
 }

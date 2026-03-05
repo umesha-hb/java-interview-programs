@@ -48,6 +48,13 @@ public class SubArrayMaxProduct {
 
         return result;
     }
+    /*
+    | Complexity Type  | Value    |
+    | ---------------- | -------- |
+    | Time Complexity  | **O(n)** |
+    | Space Complexity | **O(1)** |
+
+     */
     public static int maxProductUsingBruteForce(int[] nums) {
        int arr[] =nums;
         ArrayList<Integer> al = new ArrayList<Integer>();

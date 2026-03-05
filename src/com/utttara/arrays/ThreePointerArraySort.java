@@ -28,7 +28,8 @@ mid++
 Else if arr[mid] == 1
 mid++
 
-Else (arr[mid] == 2)
+Else
+ arr[mid] == 2
 swap(arr[mid], arr[high])
 high--
 */

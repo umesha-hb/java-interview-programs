@@ -17,3 +17,10 @@ public class PrintSubarraysOptimized {
     }
 }
 
+/*
+⏱ Complexity
+
+Time Complexity → O(n2) (2 nested loops.)
+
+Space Complexity → O(n) (Because StringBuilder can grow up to size n.)
+ */

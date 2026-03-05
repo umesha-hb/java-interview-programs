@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class MinimumSubarray {
 
     public static int minSubArray(int[] nums) {
-        int minSoFar = nums[0];//maxSoFor
-        int currentMin = nums[0];//currentMax
+        int minSoFar = nums[0];
+        int currentMin = nums[0];
 
         for (int i = 1; i < nums.length; i++) {
             currentMin = Math.min(nums[i], currentMin + nums[i]);

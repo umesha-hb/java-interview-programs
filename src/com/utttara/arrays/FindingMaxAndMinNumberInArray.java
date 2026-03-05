@@ -21,3 +21,10 @@ public class FindingMaxAndMinNumberInArray {
         System.out.println("max value in array "+max+" min value in array: "+min);
     }
 }
+/*
+⏱ Complexity
+
+Time Complexity → O(n) (single loop)
+
+Space Complexity → O(1) (only two variables)
+ */

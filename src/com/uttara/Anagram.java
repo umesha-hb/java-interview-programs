@@ -13,6 +13,7 @@ public class Anagram {
 				.collect(Collectors.joining());
 		s2 = Stream.of(s2.split("")).map(String::toUpperCase).sorted()
 				.collect(Collectors.joining());
+		System.out.println("s1:"+s1+" s2:"+s2);
 		if (s1.equals(s2))
 			System.out.println("Two Strings are Anagrams");
 		else

@@ -1,4 +1,4 @@
-package com.utttara.arrays.duplicateInArray;
+package com.utttara.arrays;
 
 import java.util.Arrays;
 import java.util.List;

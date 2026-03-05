@@ -79,7 +79,8 @@ public class GroupByJava8Person {
        System.out.println("Person Maximum Age"+p1.getAge());
        Person p2=   personList.stream().min(Comparator.comparing(e -> e.age)).get();
        System.out.println("Person Minimum Age"+p2.getAge());
-        IntSummaryStatistics intSummaryStatistics = personList.stream().collect(Collectors.summarizingInt(p -> p.age));
+        IntSummaryStatistics intSummaryStatistics = personList.stream()
+                .collect(Collectors.summarizingInt(p -> p.age));
         System.out.println("intSummaryStatistics : "+intSummaryStatistics);
     Person person =new Person("Vaibhav", 39, "male");
     

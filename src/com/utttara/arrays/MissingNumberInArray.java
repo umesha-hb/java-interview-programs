@@ -17,3 +17,10 @@ public class MissingNumberInArray {
         System.out.println(missing);
     }
 }
+/*
+⏱ Complexity
+
+Time Complexity → O(n) (single loop)
+
+Space Complexity → O(1) (only two variables)
+ */

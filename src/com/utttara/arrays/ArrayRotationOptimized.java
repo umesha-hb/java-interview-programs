@@ -6,7 +6,6 @@ public class ArrayRotationOptimized {
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 4, 5, 6, 7};
         int n = arr.length;
-        System.out.println("Original Array : " + Arrays.toString(arr));
         int k = 3;
         k = k % n;
         reverseHelper(arr, 0, k - 1);
@@ -28,3 +27,17 @@ public class ArrayRotationOptimized {
 
     }
 }
+/*
+Complexity Analysis
+
+    Time Complexity
+        First reverse → O(k)
+        Second reverse → O(n-k)
+        Third reverse → O(n)
+    Total: O(k + (n-k) + n) = O(n)
+
+    Space Complexity
+        Only a few variables.
+    O(1)
+
+ */

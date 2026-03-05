@@ -1,20 +1,22 @@
 package com.utttara.arrays;
 
 import java.util.ArrayList;
-
+//This is the famous Kadane’s Algorithm.
 public class MaximumSubarray {
 
     public static int maxSubArray(int[] nums) {
-        int maxSoFar = nums[0];//minSoFor     2
-        int currentMax = nums[0];//currentMin 2
+        int maxSoFar = nums[0];
+        int currentMax = nums[0];
 
         for (int i = 1; i < nums.length; i++) {
             currentMax = Math.max(nums[i], currentMax + nums[i]);
-            maxSoFar = Math.max(maxSoFar, currentMax);//minSoFor
+            maxSoFar = Math.max(maxSoFar, currentMax);
         }
 
         return maxSoFar;
     }
+
+
 
     /*
   Given an integer array, find the contiguous subarray that has the largest sum..
@@ -54,3 +56,10 @@ public class MaximumSubarray {
     }
 }
 
+/*
+⏱ Complexity
+
+Time Complexity → O(n) (single loop)
+
+Space Complexity → O(1) (only two variables)
+ */

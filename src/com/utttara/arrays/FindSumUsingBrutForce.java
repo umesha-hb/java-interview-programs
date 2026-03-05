@@ -18,3 +18,10 @@ public class FindSumUsingBrutForce {
 		result.stream().forEach(System.out::println);
 	}
 }
+/*
+⏱ Complexity
+
+Time Complexity →Nested loops:  O(n2)
+
+Space Complexity → O(n) (only two variables)
+ */

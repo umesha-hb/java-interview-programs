@@ -25,3 +25,10 @@ public class  ArrayRotation
         }
     }
 }
+/*
+| Complexity Type  | Value |
+| ---------------- | ----- |
+| Time Complexity  | O(n)  |
+| Space Complexity | O(n)  |
+
+ */

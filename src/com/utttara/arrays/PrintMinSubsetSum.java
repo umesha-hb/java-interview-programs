@@ -3,7 +3,7 @@ package com.utttara.arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintSubSets {
+public class PrintMinSubsetSum {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
         int n = arr.length;
@@ -21,14 +21,12 @@ public class PrintSubSets {
                     sum += arr[i];
                 }
             }
-           System.out.println("subset="+subset+" sum="+sum);
-            if (sum == target && subset.size() < minCount) {
+             if (sum == target && subset.size() < minCount) {
                 minCount = subset.size();
                 bestSubset = subset;
             }
 
         }
-        System.out.println("bestSubset="+bestSubset);
         // Output
         if (bestSubset.isEmpty()) {
             System.out.println(-1);
