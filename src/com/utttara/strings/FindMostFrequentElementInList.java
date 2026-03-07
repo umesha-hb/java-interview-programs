@@ -8,25 +8,25 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class FindMostFrequentElementInList {
-    public static void main(String args[]){
+    public static void main(String args[]) {
 
         //Without Streams
-        List<Integer> list = Arrays.asList(1,2,3,2,4,2,5,1);
-        Map<Integer,Integer> map = new HashMap<>();
-        for(Integer num : list){
-            map.put(num, map.getOrDefault(num,0)+1);
+        List<Integer> list = Arrays.asList(1, 1, 1, 2, 2, 3);
+        Map<Integer, Integer> map = new HashMap<>();
+        for (Integer num : list) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
         int maxCount = 0;
         int result = -1;
-        for(Map.Entry<Integer,Integer> entry : map.entrySet()){
-            if(entry.getValue() > maxCount){
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > maxCount) {
                 maxCount = entry.getValue();
                 result = entry.getKey();
 
             }
         }
 
-        System.out.println(result);
+        System.out.println(result + "=" + maxCount);
 
 
         //java8  Stream API

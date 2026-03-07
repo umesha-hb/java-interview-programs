@@ -9,6 +9,7 @@ public class PrintEvenAndNumbers {
     public static void main(String args[])
     {
         //Thread objects manually
+
 //        PrintNumber printNumber = new PrintNumber();
 //        Runnable r1=()->printNumber.printEven();
 //        Runnable r2=()->printNumber.printOdd();
@@ -18,18 +19,24 @@ public class PrintEvenAndNumbers {
 //        t2.start();
 
         //Using ExecutorService
-        PrintNumber printNumber = new PrintNumber();
-        ExecutorService executor = Executors.newFixedThreadPool(2);
-        executor.submit(() -> printNumber.printEven());
-        executor.submit(() -> printNumber.printOdd());
-        executor.shutdown();
 
-        /*
-        We use ExecutorService to manage threads through a thread pool. Instead of creating Thread objects,
-        we submit tasks (printOdd and printEven) to the executor, which assigns them to worker threads and handles lifecycle management.
+                /*
+        We use ExecutorService to manage threads through a thread pool.
+        Instead of creating Thread objects,
+        we submit tasks (printOdd and printEven) to the executor,
+        which assigns them to worker threads and handles lifecycle management.
          */
 
+//        PrintNumber printNumber = new PrintNumber();
+//        ExecutorService executor = Executors.newFixedThreadPool(2);
+//        executor.submit(() -> printNumber.printEven());
+//        executor.submit(() -> printNumber.printOdd());
+//        executor.shutdown();
+
+
+
         //Using CompletableFuture without ExecutorService
+
 //        PrintNumber printNumber = new PrintNumber();
 //        CompletableFuture oddFuture = CompletableFuture.runAsync(()-> printNumber.printOdd());
 //        CompletableFuture evenFeature = CompletableFuture.runAsync(()->printNumber.printEven());
@@ -47,20 +54,22 @@ public class PrintEvenAndNumbers {
         | Production systems | Not recommended         | Recommended          |
 
         When we use CompletableFuture without an executor, tasks run in the ForkJoinPool common pool.
-        When we pass an ExecutorService, tasks run in a custom thread pool, giving us better control over thread management,
+        When we pass an ExecutorService, tasks run in a custom thread pool, giving us better control
+        over thread management,
         scalability, and performance.
 
          */
 
         //Using CompletableFuture with ExecutorService (Best Practice)
-//        ExecutorService executor = Executors.newFixedThreadPool(2);
-//        PrintNumber printer = new PrintNumber();
-//        CompletableFuture<Void> oddFuture =
-//                CompletableFuture.runAsync(() -> printer.printOdd(), executor);
-//        CompletableFuture<Void> evenFuture =
-//                CompletableFuture.runAsync(() -> printer.printEven(), executor);
-//        CompletableFuture.allOf(oddFuture, evenFuture).join();
-//        executor.shutdown();
+
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        PrintNumber printer = new PrintNumber();
+        CompletableFuture<Void> oddFuture =
+                CompletableFuture.runAsync(() -> printer.printOdd(), executor);
+        CompletableFuture<Void> evenFuture =
+                CompletableFuture.runAsync(() -> printer.printEven(), executor);
+        CompletableFuture.allOf(oddFuture, evenFuture).join();
+        executor.shutdown();
 
 
     }
@@ -79,7 +88,7 @@ class PrintNumber
                     e.printStackTrace();
                 }
             }
-            System.out.println("Even :"+number);
+            System.out.println("Even :"+number+ " Thread Number :"+Thread.currentThread().getName());
             number = number+1;
             notify();
         }
@@ -94,7 +103,7 @@ class PrintNumber
                     e.printStackTrace();
                 }
             }
-            System.out.println("Odd :"+number);
+            System.out.println("Odd :"+number+ " Thread Number :"+Thread.currentThread().getName());
             number = number+1;
             notify();
         }

@@ -13,7 +13,7 @@ public class AnagramGrouper {
         Map<String, List<String>> grouped = input.stream()
                 .collect(Collectors.groupingBy(AnagramGrouper::sortedKey));
         // Step 2 & 3: Sort words inside groups and sort groups by size descending
-
+        System.out.println(grouped);
 //        grouped.values().stream()
 //                .peek(Collections::sort).forEach(System.out::println); // sort
         return grouped.values().stream()

@@ -22,6 +22,7 @@ public class PushZero {
 		}
 		while (count < arr.length)
 	        arr[count++] = 1;
+
 		for (int i = 0; i < arr.length; i++)
 		{
 			System.out.print(arr[i]+" ");
