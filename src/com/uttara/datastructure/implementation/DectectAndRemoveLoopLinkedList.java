@@ -68,8 +68,9 @@ public class DectectAndRemoveLoopLinkedList {
         Node head = new Node(1);
         head.next = new Node(2);
         head.next.next = new Node(3);
-        head.next.next.next = new Node(2);
-        head.next.next.next.next =  head.next.next; // creates a loop (1->2 -> 3 -> 4 -> 1)
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = new Node(5);
+        head.next.next.next.next.next =  head.next.next.next; // creates a loop (1->2 -> 3 -> 4 -> 1)
 //     printList(head);
 
         removeLoop(head);   // Detect and remove loop

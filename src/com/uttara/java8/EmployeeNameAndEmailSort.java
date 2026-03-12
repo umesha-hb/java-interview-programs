@@ -20,7 +20,7 @@ public class EmployeeNameAndEmailSort {
         List<Employee> sortedList = employees.stream()
                 .sorted(Comparator
                         .comparing(Employee::getName)
-                        .thenComparing(Employee::getEmail))
+                       )
                 .collect(Collectors.toList());
 
        sortedList.forEach(System.out::println);
@@ -48,4 +48,5 @@ class Employee {
     public String toString() {
         return name + " - " + email;
     }
+
 }

@@ -6,7 +6,7 @@ public class QuickSortAlogrithm {
 
 	public static void main(String[] args) {
 
-		  int arr[] = { 7,6,10,5, 9, 2, 1,15,7};
+		  int arr[] = { 1, 2,  2, 3, 3, 4, 4, 4, 5, 5, 6,1};
 
 		  QuickSortAlogrithm quickSortAlogrithm = new QuickSortAlogrithm();
 

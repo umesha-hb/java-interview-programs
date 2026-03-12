@@ -115,19 +115,17 @@ public class LongestNonRepeatingSubString {
         int left = 0;
 
         HashSet<Character> hs = new HashSet();
-        for (int i = 0; i <s.length() ; i++) {
-            while(hs.contains(s.charAt(i)))
+        for (int right = 0; right <s.length() ; right++) {
+            while(hs.contains(s.charAt(right)))
             {
                 hs.remove(s.charAt(left));
                 left++;
             }
-            hs.add(s.charAt(i));
-            if (i - left + 1 > maxLength) {
-                maxLength = i-left+1;
+            hs.add(s.charAt(right));
+            if (right - left + 1 > maxLength) {
+                maxLength = right-left+1;
                 start = left;
             }
-
-
         }
 
         return s.substring(start,start+maxLength);

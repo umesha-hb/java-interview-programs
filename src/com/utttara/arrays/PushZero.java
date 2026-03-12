@@ -27,8 +27,12 @@ public class PushZero {
 		{
 			System.out.print(arr[i]+" ");
 		}
-		List<Integer> collect = Stream.concat(Arrays.stream(arr).boxed().filter(e -> e == 1),
-				Arrays.stream(arr).boxed().filter(e -> e == 0)).collect(Collectors.toList());
+		System.out.print("================java8================");
+		List<Integer> collect = Stream.concat(Arrays.stream(arr)
+						.boxed().filter(e -> e == 1),
+				Arrays.stream(arr)
+						.boxed().filter(e -> e == 0))
+				.collect(Collectors.toList());
 
 		System.out.println(collect);
 	}

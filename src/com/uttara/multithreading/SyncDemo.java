@@ -4,9 +4,9 @@ public class SyncDemo
 {
  public static void main(String args[])
  {
-	 Counter c = new Counter();
+	 CounterOne c = new CounterOne();
 	 Thread t1 = new Thread(()->{
-		 for (int i = 0; i < 100000; i++)
+		 for (int i = 0; i < 1000; i++)
 			c.increment();
 	 });
 	 Runnable r = ()->{
@@ -24,7 +24,7 @@ public class SyncDemo
 	} catch (InterruptedException e) {
 		e.printStackTrace();
 	}
-	
+
 
 	 try {
 		t2.join();
@@ -35,7 +35,7 @@ public class SyncDemo
 	 
  }
 }
-class Counter
+class CounterOne
 {
 	int count;
 	public synchronized void increment()

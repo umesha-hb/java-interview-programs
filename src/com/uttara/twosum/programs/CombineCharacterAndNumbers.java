@@ -2,6 +2,7 @@ package com.uttara.twosum.programs;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class CombineCharacterAndNumbers {
 
@@ -16,7 +17,6 @@ public class CombineCharacterAndNumbers {
 		for (int i = 0; i < ch1.length; i++) {
 			sb.append(str1.charAt(i));
 			sb.append(str2.charAt(i));
-
 		}
 		str3 = sb.toString();
 		System.out.println(str3);
@@ -35,7 +35,8 @@ public class CombineCharacterAndNumbers {
 		System.out.println(s5.concat(s6));
 
 		Integer num = 123456;
-		Integer reversedNumber = Integer.parseInt(new StringBuilder(String.valueOf(num)).reverse().toString());
+		Integer reversedNumber
+				= Integer.parseInt(new StringBuilder(String.valueOf(num)).reverse().toString());
 		System.out.println(reversedNumber);
 		List<Integer> list =
 //				new ArrayList<>();

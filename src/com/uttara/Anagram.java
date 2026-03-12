@@ -20,14 +20,4 @@ public class Anagram {
 			System.out.println("Two Strings are Not Anagrams");
 	}
 }
-@FunctionalInterface
-interface B extends A{
-	public void a();
-}
-@FunctionalInterface
-interface A
-{
-	public void a();
-
-}
 

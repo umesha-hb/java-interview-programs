@@ -33,6 +33,8 @@ Else
 swap(arr[mid], arr[high])
 high--
 */
+
+    //Dutch National Flag Algorithm
     public static void sort(int[] arr) {
 
         int low = 0, mid = 0, high = arr.length - 1;

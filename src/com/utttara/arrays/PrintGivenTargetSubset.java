@@ -3,7 +3,7 @@ package com.utttara.arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintMinSubsetSum {
+public class PrintGivenTargetSubset {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
         int n = arr.length;

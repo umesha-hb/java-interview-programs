@@ -8,9 +8,17 @@ import java.util.stream.Collectors;
 public class ConvertEachWordIntoAStreamOfCharactersAndFlattenIt {
     public static void main(String[] args) {
 
+        try {
+            int a = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero");
+        }
+
         List<String> words = Arrays.asList("apple", "banana", "cherry");
 
-        List<Character> result = words.stream().flatMap(e -> e.chars().mapToObj(c -> (char) c)).collect(Collectors.toList());;
+        List<Character> result = words.stream()
+                .flatMap(e -> e.chars()
+                        .mapToObj(c -> (char) c)).collect(Collectors.toList());;
         System.out.println(result);
 
 //        Without Streams (Traditional Loops)

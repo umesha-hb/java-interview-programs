@@ -35,11 +35,12 @@ public class AnagramGrouperJava7 {
             map.get(key).add(word);
         }
 
+        System.out.println(map);
         // Step 2: Sort words inside each group
         for (List<String> group : map.values()) {
             Collections.sort(group);
         }
-
+        System.out.println(map);
         // Step 3: Convert map values to list
         List<List<String>> result = new ArrayList<List<String>>(map.values());
 

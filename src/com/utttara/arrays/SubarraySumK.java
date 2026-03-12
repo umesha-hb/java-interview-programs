@@ -4,6 +4,7 @@ import java.util.*;
 
 public class SubarraySumK {
 
+    //Uses the **Prefix Sum technique with a **Hash Map.
     public static int subarraySum(int[] nums, int k) {
         Map<Integer, Integer> prefixMap = new HashMap<>();
         prefixMap.put(0, 1); // Important: handles exact match case
@@ -18,6 +19,7 @@ public class SubarraySumK {
              }
              prefixMap.put(sum, prefixMap.getOrDefault(sum, 0) + 1);
          }
+        System.out.print(prefixMap);
          return count;
     }
 

@@ -50,7 +50,8 @@ public class A_PracticeHere {
                 "http://www.google.com/events/#&product=browser",
                 "http://www.example.com/wpstyle/?p=364"};
 
-        List<String> sites= Arrays.stream(inputs).flatMap(line-> Arrays.stream(line.split("/")))
+        List<String> sites=
+                Arrays.stream(inputs).flatMap(line-> Arrays.stream(line.split("/")))
                .filter(words->words.startsWith("www"))
 				.collect(Collectors.toList());
 //        System.out.println("sites=="+sites);

@@ -107,7 +107,7 @@ public class MyCustomHashMap<K, V> {
 	}
 
 	private boolean keyEquals(K k1, K k2) {
-		return k1 == k2 || (k1 != null && k1.equals(k2));
+		return Objects.equals(k1, k2);
 	}
 
 	public int size() {

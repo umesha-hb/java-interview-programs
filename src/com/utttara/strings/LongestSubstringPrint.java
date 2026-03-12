@@ -4,20 +4,9 @@ import java.util.HashSet;
 
 public class LongestSubstringPrint {
     public static void main(String args[]){
-      String input="abcbcbb";
+      String input="cbbd";
         System.out.println(longestSubstringBrute(input));
     }
-    /*
-    maxLength = 0
-left = 0
-start = 0
-set = {}
-
-➤ right = 0
-Character = 'a'
-set does NOT contain 'a'
-Add 'a'
-     */
     public static String longestSubstringBrute(String s) {
         int maxLength = 0;
         int left = 0;
@@ -35,7 +24,6 @@ Add 'a'
                 start = left;
             }
         }
-        System.out.println(maxLength);
         return s.substring(start, start + maxLength);
     }
 }

@@ -21,54 +21,59 @@ public class GroupByJava8Person {
 		personList.add(new Person("Maria", 18, "Female"));
 		personList.add(new Person("Jack", 21, "Male"));
 		personList.add(new Person("James", 35, "Male"));
-		
+
+
+
+        System.out.println("<============ Group persons by gender - get result in List:============>");
 		Map<String, List<Person>> groupByGenderList = 
-                personList.stream().collect(Collectors.groupingBy(Person::getGender));
-		//Group by gender List : Female-> Persons and Male -> Persons
-        System.out.println("1. Group persons by gender - get result in List: ");
+                personList.stream().
+                        collect(Collectors.groupingBy(Person::getGender));
         System.out.println(groupByGenderList);
-//        personList.stream().collect(Collectors.groupingBy(e->e.getName(),Collectors.maxBy(Comparator.comparing(Person::getAge))));
-        
-        Map<String, Set<Person>> groupByGenderSet = 
-                personList.stream().collect(Collectors.groupingBy(Person::getGender,Collectors.toSet()));
-         
-        //Group by gender Set: Female-> Persons and Male -> Persons
-        System.out.println("2. Group persons by gender - get result in Set: ");
-        System.out.println(groupByGenderSet.toString());
-        
-        //count the Number of male and femal employees
-        Map<String, Long> countNumberOfMaleandFemaleEmployee
-        = personList.stream().collect(Collectors.groupingBy(Person::getGender, Collectors.counting()));    
-        System.out.println("3. Group person by gender and get name of person - get result in Set: ");
+
+
+        System.out.println("=========Group persons by gender - get result in Set:===========>");
+        Map<String, Set<Person>> groupByGenderSet =
+                personList.stream().collect(Collectors.groupingBy(Person::getGender,
+                        Collectors.toSet()));
+        System.out.println(groupByGenderSet);
+
+        System.out.println("<======= count the Number of male and female employees=============>");
+         Map<String, Long> countNumberOfMaleandFemaleEmployee
+        = personList.stream().collect(Collectors.groupingBy(Person::getGender,
+                Collectors.counting()));
         System.out.println(countNumberOfMaleandFemaleEmployee);
-        
-        Map<String, Set<String>> groupByGenderAndFirstNameSet
-        = personList.stream().collect(Collectors.groupingBy(Person::getGender, TreeMap::new,
-                Collectors.mapping(Person::getName, Collectors.toSet())));    
-        System.out.println("3. Group person by gender and get name of person - get result in Set: ");
-        System.out.println(groupByGenderAndFirstNameSet.toString());
-        
+
+        System.out.println("<=============Group person with max age:===========================>");
         Map<String, Optional<Person>> personByMaxAge = personList.stream().
                 collect(Collectors.groupingBy(Person::getGender
-                        ,Collectors.maxBy(Comparator.comparing(Person::getAge))));      
-        System.out.println("5. Group person objects by gender and get person with max age: ");
+                        ,Collectors.maxBy(Comparator.comparing(Person::getAge))));
         System.out.println(personByMaxAge.toString());
-        
+
+        System.out.println("<=========Group person objects by gender and get age statistics:=================>");
         Map<String, IntSummaryStatistics> groupPersonsByAge = personList.stream().
                 collect(Collectors.groupingBy(Person::getGender
-                        ,Collectors.summarizingInt(Person::getAge)));       
-        System.out.println("6. Group person objects by gender and get age statistics: ");
+                        ,Collectors.summarizingInt(Person::getAge)));
         System.out.println(groupPersonsByAge.toString());
+
+
+        System.out.println("<===========Avg==================>");
         IntSummaryStatistics malesAge = groupPersonsByAge.get("Male");
         System.out.println("Avgerage male age:"+ malesAge.getAverage());
+
+        System.out.println("<==================Max======================>");
         System.out.println("Max male age:"+ malesAge.getMax());
+
+        System.out.println("<==========Min=================>");
         System.out.println("Min male age:"+ malesAge.getMin());
-        
+
+
+        System.out.println("<====================averageAge=======================>");
         Double averageAge = personList
 		        .stream()
 		        .collect(Collectors.averagingInt(p -> p.age));
-        System.out.println("averageAge:" +averageAge); 
-        
+        System.out.println("averageAge:" +averageAge);
+
+        System.out.println("<=================sum==================================>");
         Integer sum = personList
 		        .stream()
 		       // .filter(p->p.age>20)
@@ -82,22 +87,7 @@ public class GroupByJava8Person {
         IntSummaryStatistics intSummaryStatistics = personList.stream()
                 .collect(Collectors.summarizingInt(p -> p.age));
         System.out.println("intSummaryStatistics : "+intSummaryStatistics);
-    Person person =new Person("Vaibhav", 39, "male");
-    
-    Map<Person,String> map = new HashMap<>();
-    map.put(person, person.getName());
-   person.setName("Sanjay");
-    System.out.println(map);
-System.out.println("map.get(person) : "+map.get(person));//sanjay has code differnt thzt is the reason null
 
-
-
-        String s1 = new String("Bangalore");
-        String s2 = new String("Bangalore");
-      s1.replace("Bangalore","Hyderabad");
-        System.out.println(s1==s2);
-        System.out.println(s1.equals(s2));
-    
     
 	}
 }

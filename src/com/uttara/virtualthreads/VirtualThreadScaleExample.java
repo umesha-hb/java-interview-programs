@@ -4,21 +4,36 @@ import java.util.concurrent.*;
 /*
 Massive Scalability Demo
  */
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class VirtualThreadScaleExample {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        try (ExecutorService executor =
-                     Executors.newVirtualThreadPerTaskExecutor()) {
-//Starting from Java 7,
+        //Starting from Java 7,
 // you can use underscores (_) in numeric literals to improve readability.
-            for (int i = 0; i < 100_000; i++) {
+        int tasks = 100_000;
+
+        try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
+
+            for (int i = 0; i < tasks; i++) {
+                int taskId = i;
+
                 executor.submit(() -> {
-                    Thread.sleep(1000); // blocking call
-                    return null;
+                    try {
+                        Thread.sleep(1000); // simulate IO work
+                        System.out.println("Task " + taskId +
+                                " executed by " + Thread.currentThread());
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
                 });
             }
         }
+
+        System.out.println("All tasks submitted");
     }
 }
 

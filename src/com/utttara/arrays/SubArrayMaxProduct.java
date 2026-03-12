@@ -25,6 +25,14 @@ Explanation: Even though [-2, -1] multiplies to 2, it is not contiguous, so the 
  */
 public class SubArrayMaxProduct {
 
+    /*
+    The code you posted solves the Maximum Product Subarray problem
+    using a Dynamic Programming (DP) approach optimized to O(1) space.
+
+    More specifically, it is often called:
+
+    Kadane-style Dynamic Programming for Product Subarray.
+     */
     public static int maxProduct(int[] nums) {
         int maxSoFar = nums[0];
         int minSoFar = nums[0];

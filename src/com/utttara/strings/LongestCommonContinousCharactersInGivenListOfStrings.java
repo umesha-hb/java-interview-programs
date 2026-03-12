@@ -1,12 +1,15 @@
 package com.utttara.strings;
 
 import java.util.Arrays;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class LongestCommonContinousCharactersInGivenListOfStrings
 {
 	 public static void main(String args[]) {
-		 String arr[] = {"gracefully", "graceful",
-				 "disgraceful", "grace"};
+
+		 String arr[] = {"abcxyz","xyzabc","yzabcx"};
 		 System.out.println(longestCommonSubstring(arr));
 	 }
 	public static String longestCommonSubstring(String[] strs) {
@@ -19,7 +22,7 @@ public class LongestCommonContinousCharactersInGivenListOfStrings
 				// Remove last character from prefix until it matches
 				prefix = prefix.substring(0, prefix.length() - 1);
 				if (prefix.isEmpty())
-					return "";
+					return "No LongestCommonContinousCharactersInGivenListOfStrings";
 			}
 		}
 		return prefix;

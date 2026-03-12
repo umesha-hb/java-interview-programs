@@ -5,6 +5,7 @@ public class SubstringIndexManual {
         String str = "i am an engineer";
         String sub1 = "engine";
         String sub2 = "neer";
+      //  System.out.println(str.indexOf("engine"));
         System.out.println(findSubstringIndex(str, sub1)); // 8
         System.out.println(findSubstringIndex(str, sub2)); // 12
     }

@@ -2,7 +2,7 @@ package com.utttara.arrays;
 
 import java.util.ArrayList;
 
-public class FindSumUsingBrutForce {
+public class TwoSumUsingBrutForce {
 	public static void main(String[] args) {
 		int target = 15;
 		ArrayList result = new ArrayList();

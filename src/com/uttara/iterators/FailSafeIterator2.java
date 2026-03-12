@@ -28,6 +28,7 @@ public class FailSafeIterator2 {
                 // The Rubby name will not print but it has created separate copy   
                 copyStudents.add("Rubby");  
         }
-	}
+        System.out.println(copyStudents.getLast());
+    }
 
 }

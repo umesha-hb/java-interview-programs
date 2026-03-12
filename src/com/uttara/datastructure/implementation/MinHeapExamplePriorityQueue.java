@@ -8,8 +8,8 @@ public class MinHeapExamplePriorityQueue {
     public static void main(String[] args) {
 
         PriorityQueue<Integer> pq = new PriorityQueue<>();
-        List<Integer> al = Arrays.asList(1,1,1,2,2,2,3,3,4,5,6,6,6,6);
-pq.addAll(al);
+        List<Integer> al = Arrays.asList(1,8,1,2,2,2,3,3,4,5,6,6,6,6);
+        pq.addAll(al);
 
         while (!pq.isEmpty()) {
             System.out.println(pq.poll());
