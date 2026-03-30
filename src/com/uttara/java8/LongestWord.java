@@ -19,7 +19,7 @@ public class LongestWord {
          String longest=words[0];
          for (int i = 1; i < words.length ; i++)
          {
-             if(longest.length()<words[i].length())
+             if(longest.length()>words[i].length())
              {
                  longest = words[i];
              }

@@ -39,7 +39,7 @@ public class ExecutorOrderedExample {
     public static void main(String[] args)
     {
 //        PrintNumber printNumber = new PrintNumber();
-//        Runnable r1 = ()->printNumber.printEvenNumbers();;
+//      +
 //        Runnable r2 = ()->printNumber.printOddNumbers();;
 //        Thread t1 = new Thread(r1);
 //        Thread t2 = new Thread(r2);

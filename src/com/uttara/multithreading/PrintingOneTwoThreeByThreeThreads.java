@@ -7,25 +7,25 @@ public class PrintingOneTwoThreeByThreeThreads {
     public static void main(String[] args) {
 
         NumberPrinter printer = new NumberPrinter();
-        Runnable r1=() -> printer.printNumbers(1);
-        Runnable r2=() -> printer.printNumbers(2);
-        Runnable r3=() -> printer.printNumbers(0);
+//        Runnable r1=() -> printer.printNumbers(1);
+//        Runnable r2=() -> printer.printNumbers(2);
+//        Runnable r3=() -> printer.printNumbers(0);
+//
+//
+//        Thread t1 = new Thread(r1, "Thread1");
+//        Thread t2 = new Thread(r2, "Thread2");
+//        Thread t3 = new Thread(r3, "Thread3");
+//
+//        t1.start();
+//        t2.start();
+//        t3.start();
 
 
-        Thread t1 = new Thread(r1, "Thread1");
-        Thread t2 = new Thread(r2, "Thread2");
-        Thread t3 = new Thread(r3, "Thread3");
-
-        t1.start();
-        t2.start();
-        t3.start();
-
-
-//        ExecutorService executorService = Executors.newFixedThreadPool(3);
-//        executorService.submit(r1,"Thread1");
-//        executorService.submit(r2,"Thread2");
-//        executorService.submit(r3,"Thread3");
-//        executorService.shutdown();
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+        executorService.submit(() -> printer.printNumbers(1),"Thread1");
+        executorService.submit(() -> printer.printNumbers(2),"Thread2");
+        executorService.submit(() -> printer.printNumbers(0),"Thread3");
+        executorService.shutdown();
 
 //        ExecutorService executorService = Executors.newFixedThreadPool(3);
 //        CompletableFuture completableFutureOne=CompletableFuture.runAsync(r1,executorService);

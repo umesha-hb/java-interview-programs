@@ -19,13 +19,13 @@ public class SubarraySumK {
              }
              prefixMap.put(sum, prefixMap.getOrDefault(sum, 0) + 1);
          }
-        System.out.print(prefixMap);
+
          return count;
     }
 
     public static void main(String[] args) {
-        int[] nums = {1,1,1};
-        int k = 2;
+        int[] nums = {1,2,3};
+        int k = 3;
 
         System.out.println(subarraySum(nums, k)); // Output: 2
     }

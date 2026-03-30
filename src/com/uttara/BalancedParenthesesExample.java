@@ -5,31 +5,25 @@ import java.util.Stack;
 public class BalancedParenthesesExample {
 	public
     static boolean balancedParenthesis(String str) {
-        Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < str.length(); i++) {
-            char x = str.charAt(i);
-            char check;
-            if (x == '(' || x == '[' || x == '{') {
-                stack.push(x);
-                continue;
-            }
-            if (stack.isEmpty()) return false;
-            switch (x) {
-                case ')':
-                    check = stack.pop();
-                    if (check == '{' || check == '[') return false;
-                    break;
-                case '}':
-                    check = stack.pop();
-                    if (check == '(' || check == '[') return false;
-                    break;
-                case ']':
-                    check = stack.pop();
-                    if (check == '(' || check == '{') return false;
-                    break;
-            }
-        }
-        return (stack.isEmpty());
+      Stack<Character> stack = new Stack<>();
+      char[] ch = str.toCharArray();
+      for (char c : ch)
+      {
+          if(c=='('||c=='{'||c=='[')
+          {
+              stack.push(c);
+          }
+          else if(c==')'||c=='}'||c==']')
+          {
+              if(stack.isEmpty()) return false;
+                char top = stack.pop();
+                if((c==')'&& top!='(')||
+                        (c=='}'&& top!='{')||
+                        (c==']'&& top!='['))
+                        return  false;
+          }
+      }
+      return stack.isEmpty();
     }
     public
     static void main(String[] args) {

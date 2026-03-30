@@ -46,8 +46,7 @@ class RateLimiter
                 queue.addLast(currentTimeMs);
                 return true;
             }
+            return false;
         }
-       return false;
-
     }
 }

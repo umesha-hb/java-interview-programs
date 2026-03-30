@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 public class kFrequentElements {
     public static void main(String args[]) {
         Integer[] elements = {1,1,1,2,2,3};
-        int k = 2;
+        int k = 1;
         findKFrequentElement(elements, k);
     }
 
@@ -25,7 +25,7 @@ public class kFrequentElements {
         //        System.out.println("list : "+list);
 
         PriorityQueue<Map.Entry<Integer, Long>> priorityQueue =
-                new PriorityQueue<>((a, b) -> b.getValue().intValue() - a.getValue().intValue());
+                new PriorityQueue<>((a, b) ->b.getValue().intValue() - a.getValue().intValue());
         priorityQueue.addAll(map.entrySet());
         int count = 0;
         while (count < k) {

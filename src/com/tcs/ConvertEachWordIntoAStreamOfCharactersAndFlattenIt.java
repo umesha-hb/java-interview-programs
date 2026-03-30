@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ConvertEachWordIntoAStreamOfCharactersAndFlattenIt {
     public static void main(String[] args) {
@@ -18,7 +19,8 @@ public class ConvertEachWordIntoAStreamOfCharactersAndFlattenIt {
 
         List<Character> result = words.stream()
                 .flatMap(e -> e.chars()
-                        .mapToObj(c -> (char) c)).collect(Collectors.toList());;
+                        .mapToObj(c -> (char) c)
+                ).collect(Collectors.toList());;
         System.out.println(result);
 
 //        Without Streams (Traditional Loops)
@@ -28,7 +30,7 @@ public class ConvertEachWordIntoAStreamOfCharactersAndFlattenIt {
                 result1.add(c);
             }
         }
-//        System.out.println(result1);
+        System.out.println(result1);
     }
 }
 /*

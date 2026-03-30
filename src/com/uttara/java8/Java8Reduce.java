@@ -3,6 +3,7 @@ package com.uttara.java8;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class Java8Reduce {
@@ -18,6 +19,18 @@ public class Java8Reduce {
 				multiply(x.getPrice()))
 		.reduce(BigDecimal.ZERO,(a,b)->a.add(b)); 
 		System.out.println("sum  :  "+sum);
+
+		List<Integer> list = Arrays.asList(1,2,3,4,5,6);
+		list.stream()
+				.filter(x -> {
+					System.out.println("Filtering: " + x);
+					return x > 2;
+				})
+				.map(x -> {
+					System.out.println("Mapping: " + x);
+					return x * 2;
+				})
+				.collect(Collectors.toList());
 	}
 
 }

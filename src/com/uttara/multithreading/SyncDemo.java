@@ -10,7 +10,7 @@ public class SyncDemo
 			c.increment();
 	 });
 	 Runnable r = ()->{
-		 for (int i = 0; i < 100000; i++)
+		 for (int i = 0; i < 1000; i++)
 				c.increment();
 	 };
 	 Thread t2 = new Thread(r);

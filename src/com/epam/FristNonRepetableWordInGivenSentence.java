@@ -19,7 +19,8 @@ Expected Output - fun
         String input = "Java is fun and Java is powerful";
         Map<String,Long> m = Stream.of(input.split(" ")).collect(Collectors.groupingBy(Function.identity(),
                  LinkedHashMap::new,Collectors.counting()));
-       String fristNonRepetableWordInGivenSentence =  m.entrySet().stream().filter(e->e.getValue()==1).findFirst().get().getKey();
+       String fristNonRepetableWordInGivenSentence =  m.entrySet().stream()
+               .filter(e->e.getValue()==1).findFirst().get().getKey();
 System.out.println("fristNonRepetableWordInGivenSentence : "+fristNonRepetableWordInGivenSentence);
 
 

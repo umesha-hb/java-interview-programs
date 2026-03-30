@@ -15,7 +15,5 @@ public class MergeTwoArraysIntoSingleMap {
                 .boxed()
                 .collect(Collectors.toMap(names::get, id::get));
         System.out.println(result);
-
-
     }
 }

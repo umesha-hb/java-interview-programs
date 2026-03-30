@@ -18,11 +18,6 @@ public class GroupAnagrams {
                             return new String(arr);
                         }));
         System.out.println(map);
-
-
-        System.out.println("map.values() will list the " +
-                "words and" +
-                "sort the words inside groups");
         for (List<String> group : map.values()) {
             Collections.sort(group);
         }
@@ -33,9 +28,5 @@ public class GroupAnagrams {
         System.out.println(map.values().stream()
                 .sorted((a,b)->a.size()-b.size())
                 .collect(Collectors.toList()));
-
-
-
-
     }
 }

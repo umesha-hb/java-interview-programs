@@ -111,7 +111,7 @@ public class LongestNonRepeatingSubString {
     public static String longestSubString(String s)
     {
         int maxLength=0;
-         int start =0;
+        int start =0;
         int left = 0;
 
         HashSet<Character> hs = new HashSet();
@@ -127,7 +127,6 @@ public class LongestNonRepeatingSubString {
                 start = left;
             }
         }
-
         return s.substring(start,start+maxLength);
     }
 

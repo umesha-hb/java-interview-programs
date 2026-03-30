@@ -18,7 +18,15 @@ public class FindTheShotestWordInListUsingJava8 {
         System.out.println(x == y); // false
 List<String> list = Arrays.asList("Apple","Go","java","Stream");
 int minLength = list.stream().mapToInt(String::length).min().orElse(0);
-
-
+        String  shortest =  list.stream().min(Comparator.comparing(String::length))
+                .orElse(null);
+//String  shortest="Apple";
+//        for (int i = 0; i < list.size() ; i++) {
+//            if(shortest.length()> list.get(i).length())
+//            {
+//                shortest=list.get(i);
+//            }
+//        }
+        System.out.println("shortest : "+shortest);
     }
 }

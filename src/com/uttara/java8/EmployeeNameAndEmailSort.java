@@ -2,6 +2,7 @@ package com.uttara.java8;
 
 
 
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -24,6 +25,15 @@ public class EmployeeNameAndEmailSort {
                 .collect(Collectors.toList());
 
        sortedList.forEach(System.out::println);
+        System.out.println("===================");
+        List<Employee> sortedList1 = employees.stream()
+                .sorted(Comparator
+                        .comparing(Employee::getName)
+                        .thenComparing(Comparator.comparing(Employee::getEmail))
+                )
+                .collect(Collectors.toList());
+
+        sortedList1.forEach(System.out::println);
     }
 }
 
