@@ -40,7 +40,7 @@ public class FindMostFrequentElementInList {
                         .max(Map.Entry.comparingByValue())
                         .map(Map.Entry::getKey)
                         .orElse(null);
-        System.out.println(result);
+        System.out.println(resul);
     }
 }
 

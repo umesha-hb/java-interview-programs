@@ -1,6 +1,6 @@
 package com.uttara.creational.abstractFactorydesignpattern;
 
-public class ConcreteFactoriesWindowsFactory implements AbstracFactoryGUIFactoryInterface {
+public class ConcreteFactoriesWindowsFactory implements AbstractFactoryGUIFactoryInterface {
 
 	public Button createButton() {
 

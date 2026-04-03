@@ -11,6 +11,6 @@ public class TestObserverDesignPattern {
         channel.subscribe(alice);
         channel.subscribe(bob);
 
-       channel.uploadVideo("Java OserverDesignPattern Pattern Explained");
+       channel.uploadVideo("Java OserverDesignPattern Explained");
     }
 }

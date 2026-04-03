@@ -1,5 +1,5 @@
 package com.utttara.prime;
-
+//A prime number is a number greater than 1 that is divisible only by 1 and itself.
 public class NthPrimeNumberExample {
 
 	public static void main(String[] args)
@@ -11,6 +11,7 @@ public class NthPrimeNumberExample {
 			number++;
 			if (isPrime(number)) {
 				count++;
+				System.out.println(" prime numbers: " + number);
 			}
 		}
 
@@ -19,7 +20,8 @@ public class NthPrimeNumberExample {
 	static boolean isPrime(int n) {
 		if (n <= 1) return false;
 		for (int i = 2; i <=Math.sqrt(n); i++) {
-			if (n % i == 0) return false;
+			if (n % i == 0)
+				return false;
 		}
 		return true;
 	}

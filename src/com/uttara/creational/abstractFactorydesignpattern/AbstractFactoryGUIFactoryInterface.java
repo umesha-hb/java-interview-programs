@@ -1,6 +1,6 @@
 package com.uttara.creational.abstractFactorydesignpattern;
 
-public interface AbstracFactoryGUIFactoryInterface {
+public interface AbstractFactoryGUIFactoryInterface {
     Button createButton();
     Checkbox createCheckbox();
 }

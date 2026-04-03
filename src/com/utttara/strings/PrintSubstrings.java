@@ -2,7 +2,7 @@ package com.utttara.strings;
 
 public class PrintSubstrings {
     public static void main(String args[]){
-        String str = "accbcbb";
+        String str = "abc";
 
         for(int i = 0; i < str.length(); i++) {
 

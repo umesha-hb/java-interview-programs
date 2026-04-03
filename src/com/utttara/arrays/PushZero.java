@@ -17,7 +17,6 @@ public class PushZero {
 				arr[count]=arr[i];
 				count = count+1;
 			}
-
 		}
 		while (count < arr.length)
 	        arr[count++] = 1;

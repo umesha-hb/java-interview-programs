@@ -1,6 +1,6 @@
 package com.uttara.creational.abstractFactorydesignpattern;
 
-public class ConcreteFactoriesMacFactory implements AbstracFactoryGUIFactoryInterface {
+public class ConcreteFactoriesMacFactory implements AbstractFactoryGUIFactoryInterface {
 
 	public Button createButton() {
 

@@ -1,11 +1,10 @@
 package com.uttara.multithreading;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class PrintEvenAndNumbers {
+public class PrintEvenAndOddNumbers {
     public static void main(String args[])
     {
         //Thread objects manually

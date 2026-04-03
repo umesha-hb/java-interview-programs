@@ -1,24 +1,20 @@
 package com.utttara.palindrome;
-
 public class PalindromeExample {
-
 	public static void main(String[] args) {
-		  int r,sum=0,temp;    
-		  int n=454;//It is the number variable to be checked for palindrome
-		  
-		  temp=n;    
-		  while(n>0)
-		  {    
-		   r=n%10;  //getting remainder  
-		   sum=sum*10+r;    
-		   n=n/10;  
-		  }    
-		  if(temp==sum)    
-		   System.out.println("palindrome number ");    
-		  else    
-		   System.out.println("not palindrome");    
+		int num = 121;
+		int original = num;
+		int reversed = 0;
+		int digit =0;
 
-
+		while (num > 0) {
+			 digit = num % 10;
+			 reversed = reversed * 10 + digit;
+			 num = num / 10;
+		}
+		if (original == reversed) {
+			System.out.println("Palindrome");
+		} else {
+			System.out.println("Not Palindrome");
+		}
 	}
-
 }

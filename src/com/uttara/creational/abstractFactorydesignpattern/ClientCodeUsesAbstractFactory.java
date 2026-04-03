@@ -4,7 +4,7 @@ public class ClientCodeUsesAbstractFactory {
 	private Button button;
     private Checkbox checkbox;
 
-    ClientCodeUsesAbstractFactory(AbstracFactoryGUIFactoryInterface factory) {
+    ClientCodeUsesAbstractFactory(AbstractFactoryGUIFactoryInterface factory) {
         button = factory.createButton();
         checkbox = factory.createCheckbox();
     }
@@ -13,10 +13,10 @@ public class ClientCodeUsesAbstractFactory {
         checkbox.paint();
     }
     public static void main(String[] args) {
-        AbstracFactoryGUIFactoryInterface
-                abstracFactoryGUIFactoryInterface = new ConcreteFactoriesMacFactory();
+        AbstractFactoryGUIFactoryInterface
+                abstractFactoryGUIFactoryInterface = new ConcreteFactoriesMacFactory();
         ClientCodeUsesAbstractFactory abstractFactory
-                = new ClientCodeUsesAbstractFactory(abstracFactoryGUIFactoryInterface);
+                = new ClientCodeUsesAbstractFactory(abstractFactoryGUIFactoryInterface);
         abstractFactory.render();
 
     }

@@ -19,8 +19,6 @@ public class FrequencyCheck {
         for (char ch : s.toCharArray()) {
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
-
-
         for (int value : map.values()) {
             if(value>1)
                 return "NO";

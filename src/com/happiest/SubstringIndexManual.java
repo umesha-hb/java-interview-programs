@@ -6,27 +6,34 @@ public class SubstringIndexManual {
         String sub1 = "engine";
         String sub2 = "neer";
       //  System.out.println(str.indexOf("engine"));
-        System.out.println(findSubstringIndex(str, sub1)); // 8
-        System.out.println(findSubstringIndex(str, sub2)); // 12
+        System.out.println(findSubstring(str, sub1)); // 8
+        System.out.println(findSubstring(str, sub2)); // 12
     }
 
-    public static int findSubstringIndex(String str, String sub) {
-        int strLen = str.length();
-        int subLen = sub.length();
-         // Loop through each possible starting index
-        for (int i = 0; i <= strLen - subLen; i++) {
-            boolean match = true;
-            // Check each character in substring
-            for (int j = 0; j < subLen; j++) {
-                if (str.charAt(i + j) != sub.charAt(j)) {
-                    match = false;
+
+    public static int findSubstring(String text, String pattern) {
+
+        int n = text.length();
+        int m = pattern.length();
+
+        // Loop through text
+        for (int i = 0; i <= n - m; i++) {
+
+            int j;
+
+            // Compare characters
+            for (j = 0; j < m; j++) {
+                if (text.charAt(i + j) != pattern.charAt(j)) {
                     break;
                 }
             }
-            if (match) {
-                return i; // Found the starting index
+
+            // If full match found
+            if (j == m) {
+                return i;
             }
         }
-        return -1; // Substring not found
+
+        return -1;
     }
 }

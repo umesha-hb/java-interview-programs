@@ -3,9 +3,10 @@ package com.utttara.arrays;
 public class FindingMaxAndMinNumberInArray {
     public static void main(String[] args)
     {
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
+
         int arr[] = {10,99,12,55,3,44,103,-2};
+        int max = arr[0];
+        int min = arr[0];
         System.out.println("max value "+max+" min value : "+min);
         for (int i=0;i< arr.length;i++)
         {

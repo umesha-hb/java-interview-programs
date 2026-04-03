@@ -5,7 +5,7 @@ import java.util.regex.*;
 
 public class SwapWords {
     public static void main(String[] args) {
-        String input = "Hello@123World3242!@#a";
+        String input = "Hello@123World3242!@#";
 
         // Step 1: Extract all alphabetic words
         List<String> words = new ArrayList<>();

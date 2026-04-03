@@ -6,9 +6,7 @@ public class ClosestNumberInArray {
 		int minDiff = Math.abs(target - closest);
 		for (int num : arr) {
 			int diff = Math.abs(target - num);
-
 			if (diff < minDiff) {
-
 				minDiff = diff;
 				closest = num;
 			}
