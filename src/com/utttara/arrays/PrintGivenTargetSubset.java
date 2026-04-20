@@ -5,10 +5,10 @@ import java.util.List;
 
 public class PrintGivenTargetSubset {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5};
+        int[] arr = {1, 2, 3, 4};
         int n = arr.length;
         int totalSubsets = 1 << n; // 2^n
-        int target = 12;
+        int target = 6;
         List<Integer> bestSubset = new ArrayList<>();
         int minCount = Integer.MAX_VALUE;
 

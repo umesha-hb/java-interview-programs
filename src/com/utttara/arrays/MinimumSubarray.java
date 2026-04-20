@@ -15,19 +15,29 @@ public class MinimumSubarray {
 
         return minSoFar;
     }
-/*
-Given an integer array, find the contiguous subarray that has the smallest sum.
- 2 sum=2
-    2 3 sum=5
-    2 3 -2 sum=3
-    2 3 -2 4 sum=7
-    3 sum=3
-    3 -2 sum=1
-    3 -2 4 sum=5
-    -2 sum=-2<-------------------------smallest sum
-    -2 4 sum=2
-    4 sum=4
- */
+    /*
+    Example:
+        nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+
+        Initialization
+                maxSoFar = -2
+        currentMax = -2
+
+        Iteration Trace
+
+| i | nums[i] | currentMin = min(nums[i], currentMin + nums[i]) | minSoFar |
+| - | ------- | ----------------------------------------------- | -------- |
+| 0 | -2      | -2                                              | -2       |
+| 1 | 1       | min(1, -2+1 = -1) = -1                          | min(-2,-1)=-2      |
+| 2 | -3      | min(-3, -1-3 = -4) = -4                         | min(-2,-4)=-4     |       |
+| 3 | 4       | min(4, -4+4 = 0) = 0                            | min(-4,0)=-4       |
+| 4 | -1      | min(-1, 0-1 = -1) = -1                          | min(-4,-1)=-4       |
+| 5 | 2       | min(2, -1+2 = 1) = 1                            | min(-4,1)=-4        |
+| 6 | 1       | min(1, 1+1 = 2) = 1                             | min(-4,1)=-4        |
+| 7 | -5      | min(-5, 1-5 = -4) = -5                          | min(-4,-5)=-5      |
+| 8 | 4       | min(4, -5+4 = -1) = -1                          | min(-5,-1)=-5        |
+
+    */
     public static void main(String[] args) {
         int[] nums = {2, 3, -2, 4};
         System.out.println(minSumUsingBruteForce(nums)); // -6

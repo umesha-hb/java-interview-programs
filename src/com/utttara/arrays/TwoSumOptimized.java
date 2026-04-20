@@ -16,6 +16,7 @@ public class TwoSumOptimized {
 			}
 			map.put(nums[i], i);
 		}
+		System.out.println(map);
 
 
 	}
@@ -23,8 +24,8 @@ public class TwoSumOptimized {
 
 	public static void main(String[] args)
 	{
-		int[] nums = {8,9,1,-2,4,5,11};
-		int target = 6;
+		int[] nums = {2,1,3,8,7};
+		int target = 5;
 		twoSum(nums, target);
 	} 
 }

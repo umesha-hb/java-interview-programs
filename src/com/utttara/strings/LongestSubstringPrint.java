@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class LongestSubstringPrint {
     public static void main(String args[]){
-      String input="cbbd";
+      String input="abcabcbb";
         System.out.println(longestSubstringBrute(input));
     }
     public static String longestSubstringBrute(String s) {

@@ -15,23 +15,30 @@ public class MaximumSubarray {
 
         return maxSoFar;
     }
+// Example:
+//     nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+//
+//     Initialization
+//             maxSoFar = -2
+//     currentMax = -2
+//
+//     Iteration Trace
+//
+//             | i | nums[i] | currentMax = max(nums[i], currentMax + nums[i]) | maxSoFar |
+//             | - | ------- | ----------------------------------------------- | -------- |
+//             | 0 | -2      | -2                                              | -2       |
+//             | 1 | 1       | max(1, -2+1 = -1) = 1                           | max(-2,1) =1       |
+//             | 2 | -3      | max(-3, 1-3 = -2) = -2                          | max(1,-2) =1         |
+//             | 3 | 4       | max(4, -2+4 = 2) = 4                            | max(1,4) =4        |
+//             | 4 | -1      | max(-1, 4-1 = 3) = 3                            | max(4,3) =4       |
+//             | 5 | 2       | max(2, 3+2 = 5) = 5                             | max(4,5) =5       |
+//             | 6 | 1       | max(1, 5+1 = 6) = 6                             | max(5,6) =6        |
+//             | 7 | -5      | max(-5, 6-5 = 1) = 1                            | max(6,1) =6       |
+//             | 8 | 4       | max(4, 1+4 = 5) = 5                             | max(6,5) =6       |
 
 
-
-    /*
-  Given an integer array, find the contiguous subarray that has the largest sum..
-    2 sum=2
-    2 3 sum=5
-    2 3 -2 sum=3
-    2 3 -2 4 sum=7<----------------largest sum..
-    3 -2 sum=1
-    3 -2 4 sum=5
-    -2 sum=-2
-    -2 4 sum=2
-    4 sum=4
-     */
     public static void main(String[] args) {
-        int[] nums = {2, 3, -2, 4};
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4 };
         System.out.println(maxSubArray(nums)); // 7
     }
 

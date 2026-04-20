@@ -9,7 +9,7 @@ public class IdentityHashMapExample {
         Map<String, String> map = new IdentityHashMap<>();
 
         String a = new String("key");
-        String b =new String("key");
+        String b = new String("key");
 
         map.put(a, "value1");
         map.put(b, "value2");

@@ -1,6 +1,6 @@
 package test;
 
-import com.epam.CalculateProductOfAllNumbersInAIntegerList;
+import com.interview.epam.CalculateProductOfAllNumbersInAIntegerList;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.Collections;

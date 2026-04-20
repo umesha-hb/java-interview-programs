@@ -9,9 +9,7 @@ public class ArrayRotationOptimized {
         int numberofrotation = 3;
        numberofrotation = numberofrotation % n;
         reverseHelper(arr, 0, numberofrotation - 1);
-
          reverseHelper(arr, numberofrotation, n - 1);
-
        reverseHelper(arr, 0, n - 1);
 
     }

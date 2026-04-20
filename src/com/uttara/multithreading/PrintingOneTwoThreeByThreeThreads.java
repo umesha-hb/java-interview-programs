@@ -22,9 +22,9 @@ public class PrintingOneTwoThreeByThreeThreads {
 
 
         ExecutorService executorService = Executors.newFixedThreadPool(3);
-        executorService.submit(() -> printer.printNumbers(1),"Thread1");
-        executorService.submit(() -> printer.printNumbers(2),"Thread2");
-        executorService.submit(() -> printer.printNumbers(0),"Thread3");
+        executorService.submit(() -> printer.printNumbers(1));
+        executorService.submit(() -> printer.printNumbers(2));
+        executorService.submit(() -> printer.printNumbers(0));
         executorService.shutdown();
 
 //        ExecutorService executorService = Executors.newFixedThreadPool(3);

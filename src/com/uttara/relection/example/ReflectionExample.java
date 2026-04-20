@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 
 class Person{
     private String name="unknown";
-    public void greet()
+    private void greet()
     {
         System.out.println("Hello:"+name);
     }

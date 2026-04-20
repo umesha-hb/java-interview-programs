@@ -23,6 +23,13 @@ public class HighestSalaryPaidEmployeeInEachDept {
         employeeList.add(new Employee(7, "D", 60000, "EEE"));
         employeeList.add(new Employee(8, "D1", 80000, "EEE"));
         // maxSalary
+
+        Integer secondHighestSalary = employeeList.stream()
+                .sorted(Comparator.comparing(Employee::getSalary).reversed())
+                .skip(1)
+                .findFirst().get().getSalary();
+        System.out.println("secondHighestSalary"+secondHighestSalary);
+
         System.out.println("maxSalary");
         Employee maxSalary= employeeList.stream()
                 .collect(Collectors.maxBy(Comparator.comparing(Employee::getSalary))).get();
@@ -44,7 +51,7 @@ public class HighestSalaryPaidEmployeeInEachDept {
                         .collect(Collectors.groupingBy(
                                 e-> e.getDept(),
                                 Collectors.collectingAndThen(
-                                        Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)),
+                                        Collectors.maxBy(Comparator.comparing(Employee::getSalary)),
                                         opt->opt.orElse(null)
                                 )
                         ));
