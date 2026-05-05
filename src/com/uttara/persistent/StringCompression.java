@@ -9,7 +9,7 @@ public class StringCompression {
 
 	public static void main(String[] args) {
 
-		String s = "aaaaabbbabbbccczasaaa";
+		String s = "aaabb";
 		int count = 1;
 	  char[] ch = s.toCharArray();
 		StringBuilder sb = new StringBuilder();

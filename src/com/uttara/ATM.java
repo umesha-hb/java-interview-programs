@@ -33,17 +33,17 @@ public class ATM {
         // Use ₹200 notes
    
         used200 = Math.min(remaining / 200, available200);
-        remaining -= used200 * 200;
+        remaining = remaining - used200 * 200;
 
        
         // Use ₹100 notes
         used100 = Math.min(remaining / 100, available100);
-        remaining -= used100 * 100;
+        remaining = remaining -  used100 * 100;
 
 
         // Use ₹50 notes
         used50 = Math.min(remaining / 50, available50);
-        remaining -= used50 * 50;
+        remaining = remaining -  used50 * 50;
 
 
         if (remaining != 0) {

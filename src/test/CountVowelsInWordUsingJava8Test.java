@@ -1,6 +1,6 @@
 package test;
 
-import com.interview.epam.CountVowelsInWordUsingJava8;
+import com.old.epam.CountVowelsInWordUsingJava8;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

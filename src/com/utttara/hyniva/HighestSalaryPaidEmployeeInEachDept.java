@@ -51,7 +51,8 @@ public class HighestSalaryPaidEmployeeInEachDept {
                         .collect(Collectors.groupingBy(
                                 e-> e.getDept(),
                                 Collectors.collectingAndThen(
-                                        Collectors.maxBy(Comparator.comparing(Employee::getSalary)),
+                                        Collectors.maxBy(
+                                                Comparator.comparing(Employee::getSalary)),
                                         opt->opt.orElse(null)
                                 )
                         ));

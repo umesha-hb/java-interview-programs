@@ -10,7 +10,7 @@ public class MinHeapExamplePriorityQueue {
         PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->b-a);
         List<Integer> al = Arrays.asList(1,8,1,2,2,2,3,3,4,5,6,6,6,6);
         pq.addAll(al);
-        int k=1;
+        int k=4;
         int count=0;
 
         while (count<k) {

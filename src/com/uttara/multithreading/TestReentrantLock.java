@@ -26,7 +26,7 @@ public class TestReentrantLock {
         Counter counter = new Counter();
 
         Runnable task = () -> {
-            for(int i = 0; i < 1000; i++) {
+            for(int i = 0; i < 100; i++) {
                 counter.increment();
             }
         };

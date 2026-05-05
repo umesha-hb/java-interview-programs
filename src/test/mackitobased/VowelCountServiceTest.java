@@ -1,7 +1,7 @@
 package test.mackitobased;
 
-import com.interview.epam.VowelCountService;
-import com.interview.epam.WordRepository;
+import com.old.epam.VowelCountService;
+import com.old.epam.WordRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

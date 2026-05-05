@@ -11,6 +11,7 @@ public class NthPrimeNumberExample {
 		while (count < n) {
 			num++;
 			if (isPrime(num)) {
+				System.out.println(num+" is prime number");
 				count++;
 			}
 		}

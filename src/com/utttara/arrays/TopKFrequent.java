@@ -24,7 +24,7 @@ public class TopKFrequent {
     }
     public static void main(String[] args) {
         int[] arr = {1,1,1,2,2,2,3,3,4,5,6,6,6,6};
-
+Arrays.asList(arr);
         System.out.println(topK(arr,1));
     }
 }

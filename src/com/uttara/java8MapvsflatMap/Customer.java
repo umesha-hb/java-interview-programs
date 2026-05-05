@@ -6,7 +6,7 @@ public class Customer {
 
     private int id;
     private String name;
-    private String fristName;
+    private String firstName;
     private String lastName;
     private String email;
     private int salary;
@@ -21,7 +21,7 @@ public class Customer {
         this.name = name;
         this.email = email;
         this.phoneNumbers = phoneNumbers;
-        this.fristName=fristName;
+        this.firstName =fristName;
         this.lastName = lastName;
         this.salary = salary;
     }
@@ -60,11 +60,11 @@ public class Customer {
     }
 
 	public String getFristName() {
-		return fristName;
+		return firstName;
 	}
 
 	public void setFristName(String fristName) {
-		this.fristName = fristName;
+		this.firstName = fristName;
 	}
 
 	public String getLastName() {

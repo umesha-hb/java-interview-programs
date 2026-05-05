@@ -14,6 +14,6 @@ public class TwoSmallestNumbersInArray {
                 System.out.println(+min2+" and "+min1);
             }
         }
-        System.out.println("TwoSmallestNumbersInArray "+min1+" and "+min2);
+        System.out.println("Without array sorting Two Smallest Numbers In Array "+min1+" and "+min2);
     }
 }

@@ -1,6 +1,6 @@
 package test;
 
-import com.interview.epam.FristNonRepetableWordInGivenSentence;
+import com.old.epam.FristNonRepetableWordInGivenSentence;
 import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;

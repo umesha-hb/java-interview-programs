@@ -22,11 +22,11 @@ public class UrlDomainCount {
     }
 
     public static Map<String, Long> solutionTwo(List<String> myList) {
-        return myList.stream()
-                .map(s -> {
-                    int l = s.indexOf("www");
-                    int r = s.indexOf("com");
-                    return s.substring(l, r + 3);
+        return myList.stream().map(s->{
+            int l =s.indexOf("www");
+                    int r =s.indexOf("com");
+                    String domain=s.substring(l,r+3);
+                    return domain;
                 })
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
     }
@@ -55,6 +55,6 @@ public class UrlDomainCount {
                 "http://www.yahoo.com/testcat_au.html",
                 "http://www.google.com/events/#&product=browser",
                 "http://www.example.com/wpstyle/?p=364");
-        System.out.println(solutionOne(inputs));
+        System.out.println(solutionTwo(inputs));
     }
 }

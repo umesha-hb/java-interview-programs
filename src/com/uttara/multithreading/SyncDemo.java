@@ -5,10 +5,6 @@ public class SyncDemo
  public static void main(String args[])
  {
 	 CounterOne c = new CounterOne();
-//	 Thread t1 = new Thread(()->{
-//		 for (int i = 0; i < 1000; i++)
-//			c.increment();
-//	 });
 	 Runnable r = ()->{
 		 for (int i = 0; i < 1000; i++)
 				c.increment();
