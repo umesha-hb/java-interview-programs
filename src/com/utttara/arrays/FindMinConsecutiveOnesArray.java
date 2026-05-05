@@ -9,8 +9,10 @@ public class FindMinConsecutiveOnesArray {
             if(arr[i] == 1)
                 count++;
          else{
-                min = Math.min(min, count);
-                count = 0;
+                if(count > 0){
+                    min = Math.min(min, count);
+                    count=0;
+                }
             }
         }
         // Handle case where array ends with 1s
@@ -22,7 +24,7 @@ public class FindMinConsecutiveOnesArray {
 
     public static void main(String[] args) {
 
-        int[] arr = {1,1,0,1,1,1,0,1};
+        int[] arr = {1,1,0,1,1,1,0,0};
         System.out.println(findMinConsecutiveOnes(arr)); // Output: 1
     }
 }

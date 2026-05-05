@@ -7,14 +7,20 @@ public class MaximumSubarray {
     public static int maxSubArray(int[] nums) {
         int maxSoFar = nums[0];
         int currentMax = nums[0];
-
         for (int i = 1; i < nums.length; i++) {
             currentMax = Math.max(nums[i], currentMax + nums[i]);
             maxSoFar = Math.max(maxSoFar, currentMax);
         }
-
         return maxSoFar;
     }
+
+    public static void main(String[] args) {
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        System.out.println(maxSubArray(nums)); // 6
+    }
+
+}
+
 // Example:
 //     nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 //
@@ -36,32 +42,6 @@ public class MaximumSubarray {
 //             | 7 | -5      | max(-5, 6-5 = 1) = 1                            | max(6,1) =6       |
 //             | 8 | 4       | max(4, 1+4 = 5) = 5                             | max(6,5) =6       |
 
-
-    public static void main(String[] args) {
-        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4 };
-        System.out.println(maxSubArray(nums)); // 7
-    }
-
-    public static int maxSumUsingBruteForce(int[] nums) {
-        int arr[] = nums;
-        ArrayList<Integer> al = new ArrayList<Integer>();
-        for (int start = 0; start < arr.length; start++) {
-            for (int end = start; end < arr.length; end++) {
-                int sum = 0;
-
-                for (int k = start; k <= end; k++) {
-                    sum = sum + arr[k];
-                    System.out.print(arr[k]+" ");
-
-                }
-                System.out.println("="+sum);
-                al.add(sum);
-            }
-        }
-        int max = al.stream().mapToInt(Integer::intValue).max().stream().findFirst().orElse(0);
-        return max;
-    }
-}
 
 /*
 ⏱ Complexity

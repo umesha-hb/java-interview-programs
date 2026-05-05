@@ -15,7 +15,7 @@ public class MoveZeros {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 0, 3, 0};
+        int[] arr = {0,1, 1, 3, 0};
         moveZeros(arr);
 
         for (int num : arr) {

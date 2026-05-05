@@ -35,6 +35,13 @@ public class MaxProductSubArray {
 
         return result;
     }
+
+    public static void main(String[] args) {
+        int[] nums = {2, 3, -2, 4};
+        System.out.println(maxProduct(nums)); // 6
+
+    }
+}
     /*
  Example:
      nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
@@ -67,28 +74,4 @@ result   = -2
     | Space Complexity | **O(1)** |
 
      */
-    public static int maxProductUsingBruteForce(int[] nums) {
-       int arr[] =nums;
-        ArrayList<Integer> al = new ArrayList<Integer>();
-        for (int start = 0; start < arr.length; start++) {
-            for (int end = start; end < arr.length; end++) {
-                int mul = 1;
 
-                for (int k = start; k <= end; k++) {
-                    mul = mul * arr[k];
-                    System.out.print(arr[k]+" ");
-
-                }
-                System.out.println("="+mul);
-                al.add(mul);
-            }
-        }
-        int max = al.stream().mapToInt(Integer::intValue).max().stream().findFirst().orElse(0);
-        return max;
-    }
-    public static void main(String[] args) {
-        int[] nums = {2, 3, -2, 4};
-        System.out.println(maxProduct(nums)); // 6
-
-    }
-}

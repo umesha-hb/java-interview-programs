@@ -15,6 +15,13 @@ public class MinimumSubarray {
 
         return minSoFar;
     }
+
+    public static void main(String[] args) {
+        int[] nums = {2, 3, -2, 4};
+        System.out.println(minSubArray(nums)); // -6
+    }
+
+}
     /*
     Example:
         nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
@@ -38,27 +45,4 @@ public class MinimumSubarray {
 | 8 | 4       | min(4, -5+4 = -1) = -1                          | min(-5,-1)=-5        |
 
     */
-    public static void main(String[] args) {
-        int[] nums = {2, 3, -2, 4};
-        System.out.println(minSumUsingBruteForce(nums)); // -6
-    }
-    public static int minSumUsingBruteForce(int[] nums) {
-        int arr[] =nums;
-        ArrayList<Integer> al = new ArrayList<Integer>();
-        for (int start = 0; start < arr.length; start++) {
-            for (int end = start; end < arr.length; end++) {
-                int sum = 0;
 
-                for (int k = start; k <= end; k++) {
-                    sum = sum + arr[k];
-                    System.out.print(arr[k]+" ");
-
-                }
-                System.out.println("="+sum);
-                al.add(sum);
-            }
-        }
-        int min = al.stream().mapToInt(Integer::intValue).min().stream().findFirst().orElse(0);
-        return min;
-    }
-}
