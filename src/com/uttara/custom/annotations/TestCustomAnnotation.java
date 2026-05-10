@@ -20,6 +20,12 @@ public class TestCustomAnnotation {
 
 			System.out.println("Value: " + annotation.value());
 		}
+       int x = 10;
+		int y = 300;
+		x = x+y;
+		y = x-y;
+		x = x-y;
+		System.out.println("x: " + x +" y : "+y);
 
 	}
 

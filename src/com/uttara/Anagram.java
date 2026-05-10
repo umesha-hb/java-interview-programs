@@ -1,5 +1,6 @@
 package com.uttara;
 
+import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -9,12 +10,13 @@ public class Anagram {
 
 		String s1 = "geeks";
 		String s2 = "kseeg";
-		s1 = Stream.of(s1.split("")).map(String::toUpperCase).sorted()
-				.collect(Collectors.joining());
-		s2 = Stream.of(s2.split("")).map(String::toUpperCase).sorted()
-				.collect(Collectors.joining());
-		System.out.println("s1:"+s1+" s2:"+s2);
-		if (s1.equals(s2))
+		String s3 = Arrays.stream(s1.split("")).sorted()
+				.collect(Collectors.joining(""));
+		String s4 = Arrays.stream(s2.split("")).sorted()
+				.collect(Collectors.joining(""));
+		System.out.println(s3.equals(s4));
+
+		if (s3.equals(s4))
 			System.out.println("Two Strings are Anagrams");
 		else
 			System.out.println("Two Strings are Not Anagrams");

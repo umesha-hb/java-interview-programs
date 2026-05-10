@@ -18,10 +18,10 @@ public class FindTheLongestContinusCharacterInAString {
         }
 
         char maxChar = input.charAt(0); // first char
-        int maxCount = 1;//intally 1
+        int maxCount = 1;//intailly 1
 
         char currentChar = input.charAt(0);// first char
-        int currentCount = 1;//intally 1
+        int currentCount = 1;//intially 1
 
         for (int i = 1; i < input.length(); i++) {
             if (input.charAt(i) == currentChar) {

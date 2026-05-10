@@ -17,7 +17,7 @@ public class AmadeusP {
                         Collectors.counting()))
                 .entrySet().
                 stream().map(Map.Entry::getKey).findFirst().get();
-        System.out.println(s);
+
         //  filter(e->e.getValue()>1).
             //   limit(1).
       //  .forEach(System.out::println);

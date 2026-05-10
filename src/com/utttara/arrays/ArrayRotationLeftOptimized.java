@@ -15,16 +15,13 @@ public class ArrayRotationLeftOptimized {
     }
 
     private static void reverseHelper(int[] arr, int start, int end) {
-        int i = start;
-        int j = end;
-        while (i < j) {
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-            i++;
-            j--;
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
         }
-
     }
 }
 /*

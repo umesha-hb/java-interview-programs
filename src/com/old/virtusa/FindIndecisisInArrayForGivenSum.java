@@ -14,7 +14,7 @@ public class FindIndecisisInArrayForGivenSum {
             int index = sum-arr[i];
             if(map.containsKey(index))
             {
-                System.out.println(i+":"+map.get(index));
+                System.out.println(map.get(index)+","+i);
                 break;
             }
             map.put(arr[i],i);

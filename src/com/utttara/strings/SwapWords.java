@@ -22,8 +22,6 @@ public class SwapWords {
         }
         m.appendTail(stringBuilder);
         System.out.println(stringBuilder.toString());
-
-
     }
 }
 

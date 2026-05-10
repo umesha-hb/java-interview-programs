@@ -15,7 +15,7 @@ public class SubarraySumK {
              sum += num;
              if (prefixMap.containsKey(sum - k))
              {
-                 count += prefixMap.get(sum - k);
+                 count += prefixMap.get(sum - k);//1
              }
              prefixMap.put(sum, prefixMap.getOrDefault(sum, 0) + 1);
          }

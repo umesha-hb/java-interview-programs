@@ -112,21 +112,18 @@ public class LongestNonRepeatingSubString {
 
     private static int longestSubStringMaxLength(String s) {
         int maxLength=0;
-        int start =0;
         int left = 0;
 
         HashSet<Character> hs = new HashSet();
         for (int right = 0; right <s.length() ; right++) {
             while(hs.contains(s.charAt(right)))
             {
-                hs.remove(s.charAt(left));
+                hs.remove(s.charAt(left));//shrinking
                 left++;
             }
             hs.add(s.charAt(right));
-            if (right - left + 1 > maxLength) {
-                maxLength = right-left+1;
-//                start = left;
-          }
+           maxLength=Math.max(maxLength,right-left+1);
+
         }
         return maxLength;
     }

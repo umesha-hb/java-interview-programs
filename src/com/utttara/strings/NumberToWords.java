@@ -84,8 +84,8 @@ public class NumberToWords {
     }
 
     public static void main(String[] args) {
-      System.out.println(numberToWords(199999));
-//        System.out.println(numberToWords(123));
+      //System.out.println(numberToWords(199999));
+       System.out.println(numberToWords(123));
 //     System.out.println(numberToWords(10245));
 //        System.out.println(numberToWords(1110245));
 //      System.out.println(numberToWords(2147483647));

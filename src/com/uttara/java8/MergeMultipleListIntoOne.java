@@ -20,6 +20,7 @@ public class MergeMultipleListIntoOne {
                 Arrays.asList(3)
         );
         System.out.println("orginalList = "+input);
-        System.out.println("meregedFlattern = "+MergeMultipleListIntoOne.MergeMultipleListIntoOne(input));
+        System.out.println("meregedFlattern = "+MergeMultipleListIntoOne.
+                MergeMultipleListIntoOne(input));
     }
 }

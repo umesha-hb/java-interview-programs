@@ -13,6 +13,7 @@ class Node {
 public class DectectAndRemoveLoopLinkedList {
 
     // Detect and remove loop
+    //Floyd’s Cycle Detection Algorithm
     public static void removeLoop(Node head) {
         Node slow = head;//slow
         Node fast = head;//fast
