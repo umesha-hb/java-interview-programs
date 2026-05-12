@@ -1,6 +1,6 @@
 package com.uttara.circuitbreaker;
 
-public class CircuitBreakerDemo {
+public class TestCircuitBreaker {
 
     public static void main(String[] args) throws InterruptedException {
 

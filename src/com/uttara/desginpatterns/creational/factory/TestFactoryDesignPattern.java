@@ -1,6 +1,6 @@
 package com.uttara.desginpatterns.creational.factory;
 
-public class ClientCodeNotificationService {
+public class TestFactoryDesignPattern {
     public static void main(String[] args)
     {
         NotificationFactory notificationFactory = new NotificationFactory();

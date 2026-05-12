@@ -1,6 +1,5 @@
-package com.uttara.virtualthreads;
+package com.uttara.java21.virtualthreads;
 
-import java.util.concurrent.*;
 /*
 Massive Scalability Demo
  */

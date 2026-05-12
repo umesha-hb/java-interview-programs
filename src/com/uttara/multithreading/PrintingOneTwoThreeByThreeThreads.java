@@ -46,7 +46,7 @@ class NumberPrinter
     {
         while(number<20)
         {
-            if(number%3!=threadId)
+            while(number%3!=threadId)
             {
                 try
                 {

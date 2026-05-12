@@ -46,7 +46,7 @@ public class StreamInterviewQ1 {
 
         Map<String, Optional<Employee>> result = employees.stream()
                 .collect(Collectors.groupingBy(e -> e.getDepartment(),
-                                Collectors.maxBy(Comparator.comparing(Employee::getSalary))
+                                Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))
                                 )
                 );
         System.out.println(result);
@@ -54,7 +54,7 @@ public class StreamInterviewQ1 {
         Map<String, Employee> collect = employees.stream()
                 .collect(Collectors.groupingBy(e -> e.getDepartment(),
                         Collectors.collectingAndThen(
-                                Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)),
+                                Collectors.maxBy(Comparator.comparing(Employee::getSalary)),
                                 Optional::get)
                 ));
         System.out.println(collect);

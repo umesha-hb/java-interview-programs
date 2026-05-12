@@ -7,7 +7,7 @@ class Counter {
     private ReentrantLock lock = new ReentrantLock();
 
     public void increment() {
-        lock.lock();        // acquire lock
+       if(lock.tryLock())        // acquire lock
         try {
             count++;
         } finally {

@@ -1,10 +1,10 @@
 package com.uttara.desginpatterns.creational.abstractfactory;
 
-public class ClientCodeUsesAbstractFactory {
+public class TestAbstractFactoryDesignPattern {
 	private Button button;
     private Checkbox checkbox;
 
-    ClientCodeUsesAbstractFactory(AbstractFactoryGUIFactoryInterface factory) {
+    TestAbstractFactoryDesignPattern(AbstractFactoryGUIFactoryInterface factory) {
         button = factory.createButton();
         checkbox = factory.createCheckbox();
     }
@@ -15,8 +15,8 @@ public class ClientCodeUsesAbstractFactory {
     public static void main(String[] args) {
         AbstractFactoryGUIFactoryInterface
                 abstractFactoryGUIFactoryInterface = new ConcreteFactoriesMacFactory();
-        ClientCodeUsesAbstractFactory abstractFactory
-                = new ClientCodeUsesAbstractFactory(abstractFactoryGUIFactoryInterface);
+        TestAbstractFactoryDesignPattern abstractFactory
+                = new TestAbstractFactoryDesignPattern(abstractFactoryGUIFactoryInterface);
         abstractFactory.render();
 
     }

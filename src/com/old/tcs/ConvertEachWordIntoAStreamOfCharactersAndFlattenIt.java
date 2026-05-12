@@ -18,7 +18,8 @@ public class ConvertEachWordIntoAStreamOfCharactersAndFlattenIt {
 //        Without Streams (Traditional Loops)
         List<Character> result1 = new ArrayList<>();
         for(String word : words){
-            for(char c : word.toCharArray()){
+            for(char c : word.toCharArray())
+            {
                 result1.add(c);
             }
         }

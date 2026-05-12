@@ -21,10 +21,11 @@ public class FailFastIterator2 {
         Iterator itr = students.iterator();   
           
         //iterating ArrayList using Iterator   
-        while (itr.hasNext()) {  
-            if ((String)itr.next() == "Paul")   
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+            if ((String)itr.next() == "Paul")
                 // It will not throw an exception   
-                students.remove("Amara");  
+                students.remove("Amara");
         }  
           
         System.out.println(students);  

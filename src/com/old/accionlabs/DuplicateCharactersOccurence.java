@@ -20,11 +20,7 @@ public class DuplicateCharactersOccurence {
         char[] ch = input.toCharArray();
         for (int i = 0; i < ch.length; i++) {
             if (Character.isLetter(ch[i])) {
-                if (hs.containsKey(ch[i])) {
-                    hs.put(ch[i], hs.get(ch[i]) + 1);
-                } else {
-                    hs.put(ch[i], 1);
-                }
+              hs.put(ch[i], hs.getOrDefault(ch[i],0)+1);
             }
         }
         System.out.println("map : " + hs);

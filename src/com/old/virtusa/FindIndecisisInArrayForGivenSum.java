@@ -3,6 +3,7 @@ package com.old.virtusa;
 import java.util.HashMap;
 import java.util.Map;
 
+//HashMap lookup optimization.
 public class FindIndecisisInArrayForGivenSum {
     public static void main(String args[])
     {
@@ -11,10 +12,10 @@ public class FindIndecisisInArrayForGivenSum {
         Map<Integer,Integer> map = new HashMap<>();
         for(int i =0;i<arr.length;i++)
         {
-            int index = sum-arr[i];
-            if(map.containsKey(index))
+            int complement = sum-arr[i];
+            if(map.containsKey(complement))
             {
-                System.out.println(map.get(index)+","+i);
+                System.out.println(map.get(complement)+","+i);
                 break;
             }
             map.put(arr[i],i);

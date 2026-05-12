@@ -18,9 +18,6 @@ public class MissingCharacter {
         char missing = (char) (expectedSum - actualSum);
         System.out.println(missing);
 
-        char ch = 'd';
-        int value = ch;
 
-        System.out.println(value); // 100
     }
 }

@@ -1,4 +1,4 @@
-package com.uttara.java21;
+package com.uttara.java21.records;
 
 /*
 Java Records (Java 16+) are designed to model immutable data carriers—objects

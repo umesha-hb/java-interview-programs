@@ -1,4 +1,4 @@
-package com.uttara.java21;
+package com.uttara.java21.sealed;
 
 public sealed  class Shape // sealed restrict further
         permits Circle, Rectangle { //Only Circle and Rectangle can extend Shape.

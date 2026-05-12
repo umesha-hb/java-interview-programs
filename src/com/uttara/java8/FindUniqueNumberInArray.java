@@ -13,7 +13,9 @@ public class FindUniqueNumberInArray {
     }
 
     private static void findUniqueNumberInArray(int[] arr) {
-        Integer integer = Arrays.stream(arr).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+        Integer integer = Arrays.stream(arr).boxed()
+                .collect(Collectors.groupingBy(Function.identity(),
+                        Collectors.counting()))
                 .entrySet()
                 .stream()
                 .filter(e -> e.getValue() == 1)
