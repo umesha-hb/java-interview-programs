@@ -21,10 +21,6 @@ public class RomanNumeralToInteger {
     {
         String s = "X";
         System.out.println(romanToInt("IV")); // Output: 14
-//        System.out.println(romanToInt("MIXX"));
-//        System.out.println(romanToInt("IXX"));
-//        System.out.println(romanToInt("DXLII"));
-//        System.out.println(romanToInt("MXXIII"));
     }
 
     public static int romanToInt(String s) {

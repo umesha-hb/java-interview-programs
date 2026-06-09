@@ -17,7 +17,7 @@ public class Java8Reduce {
         BigDecimal sum = invoices.stream().
                 map(x -> x.getQty().
                         multiply(x.getPrice()))
-                .reduce(BigDecimal.ZERO, (a, b) -> a.add(b));
+                .reduce(BigDecimal.ZERO, (a, b) -> a.multiply(b));
         System.out.println("sum  :  " + sum);
 
 

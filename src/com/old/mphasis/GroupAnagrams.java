@@ -8,7 +8,8 @@ public class GroupAnagrams {
     public static void main(String args[])
     {
         List<String> al = Arrays.asList("eat","tea","tan","ate","nat","bat");
-        Map<String, List<String>> collect = al.stream().collect(Collectors.groupingBy(e->Stream.of(e.split("")).sorted().collect(Collectors.joining())));
+        Map<String, List<String>> collect = al.stream().collect(Collectors.groupingBy(
+                e->Stream.of(e.split("")).sorted().collect(Collectors.joining())));
         System.out.println(collect.values());
         System.out.println("sort the words inside group");
         for (List<String> group : collect.values())

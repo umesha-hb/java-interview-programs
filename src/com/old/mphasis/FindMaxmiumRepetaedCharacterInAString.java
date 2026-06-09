@@ -16,7 +16,8 @@ public class FindMaxmiumRepetaedCharacterInAString {
         System.out.println("longestRepeated character : "+longestCharacter);
 
         PriorityQueue<Map.Entry<String, Long>> priorityQueue =
-                new PriorityQueue<>((a, b) ->b.getValue().intValue()
+                new PriorityQueue<>((a, b)
+                        ->b.getValue().intValue()
                         -
                         a.getValue().intValue());
         priorityQueue.addAll(collect.entrySet());

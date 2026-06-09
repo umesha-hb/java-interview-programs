@@ -33,7 +33,6 @@ class PrintNumber
                 }
 
             }
-
             System.out.println(Thread.currentThread().getName()+"->"+number);
             number=number+1;
             notifyAll();
