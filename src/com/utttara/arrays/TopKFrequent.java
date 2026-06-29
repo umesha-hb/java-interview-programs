@@ -8,7 +8,7 @@ public class TopKFrequent {
     public static List<Integer> topK(int[] nums, int k) {
         Map<Integer, Long> map = Arrays.stream(nums).boxed().
                 collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
+System.out.println(map);
         PriorityQueue<Map.Entry<Integer,Long>> pq =
                 new PriorityQueue<>((a,b)
                         -> b.getValue().intValue()-a.getValue().intValue());

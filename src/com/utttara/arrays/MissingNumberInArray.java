@@ -9,9 +9,8 @@ public class MissingNumberInArray {
         int n = 3;
         int expectedSum = n * (n + 1) / 2;
         int actualSum = 0;
-
-        for (int num : arr) {
-            actualSum += num;
+        for (int i = 0; i <arr.length ; i++) {
+            actualSum  = actualSum+arr[i];
         }
         int missing = expectedSum - actualSum;
         System.out.println(missing);

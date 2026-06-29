@@ -10,8 +10,8 @@ public class MissingCharacter {
         }
         System.out.println(expectedSum);
         int actualSum = 0;
-        for (char num : arr) {
-            actualSum += num;
+        for (int i = 0; i <arr.length ; i++) {
+            actualSum = actualSum+arr[i];
         }
         System.out.println(actualSum);
         System.out.println(expectedSum - actualSum);

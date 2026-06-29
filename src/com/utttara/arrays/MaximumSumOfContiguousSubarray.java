@@ -2,7 +2,7 @@ package com.utttara.arrays;
 
 import java.util.ArrayList;
 //This is the famous Kadane’s Algorithm.
-public class MaximumSubarray {
+public class MaximumSumOfContiguousSubarray {
 
     public static int maxSubArray(int[] nums) {
         int maxSoFar = nums[0];

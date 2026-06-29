@@ -11,10 +11,10 @@ public class ReverseOnlyAlphabets {
         while(left<right)
         {
             // if left is not alphabet, move left pointer
-            if(Character.isDigit(ch[left]))
+            if(!Character.isLetter(ch[left]))
                 left++;
              // if right is not alphabet, move right pointer
-            else if(Character.isDigit(ch[right]))
+            else if(!Character.isLetter(ch[right]))
                    right--;
             else
             {

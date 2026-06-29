@@ -1,6 +1,6 @@
 package com.utttara.arrays;
 
-public class MaximumSubarraySumK {
+public class MaximumSumOfSubarrayOfSizeK {
     public static int maxSumUsingBruteForce(int[] arr, int k) {
         int n = arr.length;
         int max_ans = 0;
@@ -15,10 +15,22 @@ public class MaximumSubarraySumK {
     }
 
     public static void main(String args[]) {
-        int arr[] = {1, 4, 2, 10, 23, 3, 1, 0, 20};
-        int k = 4;
+        int arr[] = {2, 1, 5, 1, 3, 2};
+        int k = 3;
         System.out.println(maxSumUsingBruteForce(arr, k));
     }
+
+    /*
+    Example
+
+Suppose:
+
+arr = [2, 1, 5, 1, 3, 2]
+k = 3
+
+The subarrays of size 3 are:
+
+     */
 
 
 }
